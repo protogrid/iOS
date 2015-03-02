@@ -1,0 +1,56 @@
+<div class='form-group col-sm-{{ column_width }}'>
+	{{#before_first_save}}
+	<label for='{{ name }}'>{{ label }}</label>
+	<div>{{ save_first_hint }}</div>
+	<table style='display:none'>
+		{{#table_data}}
+		<tbody>
+			{{#rows}}
+			<tr data-key='{{ key }}'></tr>
+			{{/rows}}
+		</tbody>
+		{{/table_data}}
+	</table>
+	{{/before_first_save}}
+	{{^before_first_save}}
+	<input id="attachment-upload" name="attachment-upload" type="file" style="display:none">
+	<button class="btn btn-default btn-sm attachments-tableview-button-override" type="button" id="attachment-upload-button" onclick="$('input[id=attachment-upload]').click();">{{ add_attachment_label }}</button>
+	{{{ edit_options }}}
+	<table class='table table-striped tableview manual-ordering disable-reorder {{#table_controls_in_header}}table-controls-in-header{{/table_controls_in_header}}' id='attachments' data-label='{{ label }}' data-editable='true'>
+			{{#table_data}}
+			<thead>
+					<tr>
+						<th class="non-compressible fixed-at-beginning-of-table always-visible"></th>
+						<th data-identifier='&&filename' data-displaypriority='10'>
+							{{ filename_label }}
+						</th>
+						<th data-identifier='&&size' data-displaypriority='9'>
+							{{ size_label }}
+						</th>
+						<!-- <th data-identifier='&&modified' data-displaypriority='8'>
+							{{ modified_label }}
+						</th> -->
+					</tr>
+			</thead>
+			<tbody>
+					{{#rows}}
+					<tr data-key='{{ key }}'>
+						<td class="no-click-to-open">
+							<input type="checkbox" name="selected_{{ name }}" value="{{ key }}">
+						</td>
+						<td class="no-click-to-open" data-identifier='&&filename'>
+							<a href="{{ file_url }}">{{ filename }}</a>
+						</td>
+						<td class="no-click-to-open" data-identifier='&&size'>
+							{{ size }}
+						</td>
+						<!-- <td class="no-click-to-open" data-identifier='&&modified'>
+							{{ modified }}
+						</td> -->
+					</tr>
+					{{/rows}}
+			</tbody>
+			{{/table_data}}
+	</table>
+	{{/before_first_save}}
+</div>

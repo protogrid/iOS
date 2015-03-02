@@ -1,0 +1,15 @@
+<div class='col-sm-{{ column_width }}'>
+	<div class="form-group">
+		{{^disable_label}}
+		<label for="{{ name }}">{{ label }}</label>
+		{{/disable_label}}
+		{{#multi_line}}
+		<textarea lang="{{ language }}" class="form-control{{#validation_error}} validation-error{{/validation_error}} to-be-posted" name='{{ name }}'>{{ value }}</textarea>
+		{{/multi_line}}
+		{{^multi_line}}
+		<input type="text" class="form-control{{#validation_error}} validation-error{{/validation_error}} to-be-posted" name='{{ name }}' lang="{{ language }}" spellcheck="true" value='{{ value }}'>
+		{{/multi_line}}
+		{{#validation_error}}<div class="help-block validation-error-text">{{ text }}</div>{{/validation_error}}
+		{{#help_text}}<div class="help-block">{{ text }}</div>{{/help_text}}
+	</div>
+</div>

@@ -1,0 +1,64 @@
+<form role='form' id='card_form' class='{{#disable_padding}}no-padding{{/disable_padding}} {{#additional_form_classes}} {{ classname }} {{/additional_form_classes}}' data-key='{{ card_key }}' data-protokey='{{ proto_key }}' data-saveable='{{ saveable_content_available }}' data-postsaveaction='{{ post_save_action }}' data-beforefirstsave='{{ before_first_save }}' method=post enctype="multipart/form-data">
+	<div class="card-header">
+		<a class="navToggle"></a>
+		<ol class="breadcrumb">
+			{{#breadcrumbs}}
+			<li class="active">
+				<a href="javascript:void(0)" onclick="post_form(null, 'no_update_and_edit_related_card', null, '{{ card_id }}', '{{ app_id }}');" data-relatedkey='{{ card_id }}' data-relatedappkey='{{ app_id }}' data-action='edit_related_card' data-modalname='saveChangesModal' data-toggle="modal">{{ representation }}</a>
+			</li>
+			{{/breadcrumbs}}
+		</ol>
+		<div class="card-title"><span>{{ card_title }}</span>&nbsp;{{#deleted}}<span class="label label-danger">{{ deleted_label }}</span>{{/deleted}}</div>
+	</div> <!-- .card-header -->
+	{{#card_actions_available}}
+	<div class="card-actions-fade-left"></div>
+	<div class="card-actions-fade-right"></div>
+	<div class="card-actions">
+		<div class="card-actions-inner">
+			<div class='pull-right'>
+				<div id='integrated-tableview-actions' class='action-group'></div>
+				{{#saveable_content_available}}
+				<a href="javascript:void(0)" onclick="post_form('{{ proto_key }}');" class="btn btn-success together-right" id='save_button' disabled="disabled"><span class="icon-save"></span>{{ save_label }}</a>
+				<a href="javascript:void(0)" onclick="post_form('{{ proto_key }}', 'save_and_close');" class="btn btn-primary together-left" id='save_and_close_button' disabled="disabled">{{ save_and_close_label }}</a>
+				{{/saveable_content_available}}
+				{{#card_closeable}}
+				<a href="javascript:void(0)" onclick="post_form('{{ proto_key }}', 'close_without_saving');" class="btn btn-danger" data-toggle='modal' data-modalname='discardChangesModal' data-action='close_without_saving' id='close_without_saving_button'>{{ close_without_saving_label }}</a>
+				{{/card_closeable}}
+				<div class="clear"></div>
+			</div>
+			<div class="clear"></div>
+		</div> <!-- .card-actions-inner-->
+	</div> <!-- .card-actions -->
+	{{/card_actions_available}}
+	<div class="card-content">
+		<fieldset>
+			{{{ rows }}}
+		</fieldset>
+	</div>
+	<div class="card-resize"></div>
+	<div class="card-footer">
+		<div class='pull-left'>
+			<div class='action-group'>{{{ edit_options }}}</div>
+		</div>
+	</div>
+	{{#modal_dialogs}}
+	<div class="modal" id="{{ modal_id }}" data-choicetype='{{ choice_type }}'>
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<span>{{ title }}</span><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body">
+					{{{ content }}}
+				</div>
+				<div class="modal-footer">
+					<a href="#" class="btn" data-dismiss="modal">{{ cancel_label }}</a>
+					{{^primary_action_disabled}}
+					<a href="javascript:void(0)" class="btn btn-{{ action_style }} btn-action" id='{{ action_link_id }}'>{{ action_label }}</a>
+					{{/primary_action_disabled}}
+				</div>
+			</div>
+		</div>
+	</div>
+	{{/modal_dialogs}}
+</form>

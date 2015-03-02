@@ -1,0 +1,18 @@
+{{^inline}}
+<div class='col-sm-{{ column_width }}'>
+	<div class="form-group readonly color-show-choice">
+		<label for="{{ name }}">{{ label }}</label>
+		{{/inline}}
+		{{#inline}}
+		<div class="color-show-choice">
+		{{/inline}}
+		{{#choices}}
+			{{#selected}}<div class='input-placeholder'><div class='color color-{{ value }}'></div></div>{{/selected}}
+		{{/choices}}
+		{{#inline}}
+		</div>
+		{{/inline}}
+		{{^inline}}
+	</div>
+</div>
+{{/inline}}

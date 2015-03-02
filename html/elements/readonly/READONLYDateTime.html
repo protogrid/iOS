@@ -1,0 +1,9 @@
+{{^inline}}
+<div class='col-sm-{{ column_width }}'>
+	<div class="form-group readonly">
+		<label for="{{ name }}">{{ label }}</label>
+		{{/inline}}
+		<div class='datetime input-placeholder' data-utc-iso='{{ value }}'></div>
+		{{^inline}}
+</div>
+{{/inline}}

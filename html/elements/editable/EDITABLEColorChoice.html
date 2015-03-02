@@ -1,0 +1,16 @@
+{{^inline}}
+<div class='col-sm-{{ column_width }}'>
+	<div class='form-group'>
+		<label for='{{ name }}'>{{ label }}</label>
+		{{/inline}}
+		<select class="form-control color-choice to-be-posted" name='{{ name }}'>
+		{{#choices}}
+			<option value='{{ value }}' {{#selected}}selected='selected'{{/selected}}></option>
+		{{/choices}}
+		</select>
+		{{^inline}}
+		{{#validation_error}}<span class="help-block validation-error-text">{{ text }}</span>{{/validation_error}}
+		{{#help_text}}<span class="help-block">{{ text }}</span>{{/help_text}}
+	</div>
+</div>
+{{/inline}}

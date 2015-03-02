@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>elements</key>
+	<dict>
+		<key>editable</key>
+		<array>
+			<string>EDITABLEAttachments</string>
+			<string>EDITABLEChoice</string>
+			<string>EDITABLECode</string>
+			<string>EDITABLEColorChoice</string>
+			<string>EDITABLEDateTime</string>
+			<string>EDITABLEFileChoice</string>
+			<string>EDITABLEManuallyOrderedTableView</string>
+			<string>EDITABLEMultilanguageText</string>
+			<string>EDITABLENumber</string>
+			<string>EDITABLEParentRelation</string>
+			<string>EDITABLEPassword</string>
+			<string>EDITABLEText</string>
+			<string>EDITABLEYesNo</string>
+		</array>
+		<key>readonly</key>
+		<array>
+			<string>READONLYAttachments</string>
+			<string>READONLYChoice</string>
+			<string>READONLYColorChoice</string>
+			<string>READONLYDateTime</string>
+			<string>READONLYManuallyOrderedTableView</string>
+			<string>READONLYMultilanguageText</string>
+			<string>READONLYNumber</string>
+			<string>READONLYParentRelation</string>
+			<string>READONLYPassword</string>
+			<string>READONLYSubmitButton</string>
+			<string>READONLYTableView</string>
+			<string>READONLYText</string>
+			<string>READONLYYesNo</string>
+		</array>
+	</dict>
+	<key>others</key>
+	<array>
+		<string>OTHERSbase</string>
+		<string>OTHERScard_row</string>
+		<string>OTHERScard</string>
+		<string>OTHERSedit_options</string>
+		<string>OTHERSenvironment_portal</string>
+		<string>OTHERSmodal_content</string>
+		<string>OTHERSuser_menu</string>
+	</array>
+</dict>
+</plist>

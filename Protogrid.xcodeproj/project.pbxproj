@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6137F71A1A36E42B0005E3AD /* Protogrid_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6137F7191A36E42B0005E3AD /* Protogrid_iOS.framework */; };
+		6137F71C1A36E60F0005E3AD /* html in Resources */ = {isa = PBXBuildFile; fileRef = 6137F71B1A36E60F0005E3AD /* html */; };
+		6137F71D1A3725850005E3AD /* Protogrid_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6137F7191A36E42B0005E3AD /* Protogrid_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		619A69671A119BC3005C315A /* PGridSeedVersion in Resources */ = {isa = PBXBuildFile; fileRef = 6176788D19FAEE64003AEB6F /* PGridSeedVersion */; };
+		619A69681A119BC3005C315A /* main.cblite in Resources */ = {isa = PBXBuildFile; fileRef = 907E2EFE19FADB5100E63F1E /* main.cblite */; };
+		619A69691A119BC3005C315A /* roles.cblite in Resources */ = {isa = PBXBuildFile; fileRef = 907E2F0019FADB5100E63F1E /* roles.cblite */; };
+		619A696A1A119BC3005C315A /* system.cblite in Resources */ = {isa = PBXBuildFile; fileRef = 907E2F0219FADB5100E63F1E /* system.cblite */; };
+		619A696B1A119BC3005C315A /* users_mirror.cblite in Resources */ = {isa = PBXBuildFile; fileRef = 907E2F0419FADB5100E63F1E /* users_mirror.cblite */; };
+		61B2298D1AA3380900887A10 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B2298C1AA3380900887A10 /* libsqlite3.dylib */; };
+		61B2298F1AA3381700887A10 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B2298E1AA3381700887A10 /* libz.dylib */; };
+		61C49FD01A36E35E00EC772F /* js in Resources */ = {isa = PBXBuildFile; fileRef = 61C49FCF1A36E35E00EC772F /* js */; };
+		61ED42A01A9EBAD900C9AEFE /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 61ED429F1A9EBAD900C9AEFE /* README.md */; };
+		9078308019E5978B00521386 /* PGridHTMLTemplateFilenames.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9078307F19E5978A00521386 /* PGridHTMLTemplateFilenames.plist */; };
+		90B72F9A1A1E3B4800A02616 /* static in Resources */ = {isa = PBXBuildFile; fileRef = 90B72F991A1E3B4800A02616 /* static */; };
+		90C136611A1AA01E000A9CA2 /* PGridReplicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90C136601A1AA01E000A9CA2 /* PGridReplicatorView.xib */; };
+		90F20B3B19E1C14000EE88E6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F20B1B19E1C14000EE88E6 /* Images.xcassets */; };
+		90F20B3C19E1C14000EE88E6 /* PGridmain.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F20B1C19E1C14000EE88E6 /* PGridmain.m */; };
+		90F20B3F19E1C14000EE88E6 /* PGridReplication.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90F20B1F19E1C14000EE88E6 /* PGridReplication.plist */; };
+		90F20B4019E1C14000EE88E6 /* PGridReplicationUnitTestsConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90F20B2019E1C14000EE88E6 /* PGridReplicationUnitTestsConfiguration.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		614605DA1A36C1D700EC826A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6137F71D1A3725850005E3AD /* Protogrid_iOS.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6137F7191A36E42B0005E3AD /* Protogrid_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Protogrid_iOS.framework; sourceTree = "<group>"; };
+		6137F71B1A36E60F0005E3AD /* html */ = {isa = PBXFileReference; lastKnownFileType = folder; path = html; sourceTree = "<group>"; };
+		6176788D19FAEE64003AEB6F /* PGridSeedVersion */ = {isa = PBXFileReference; lastKnownFileType = text; path = PGridSeedVersion; sourceTree = "<group>"; };
+		61B2298C1AA3380900887A10 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		61B2298E1AA3381700887A10 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		61B229B11AA3398900887A10 /* CBLAttachment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CBLAttachment.h; path = Frameworks/CouchbaseLite.framework/Headers/CBLAttachment.h; sourceTree = "<group>"; };
+		61B229B21AA3398900887A10 /* CBLAuthenticator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CBLAuthenticator.h; path = Frameworks/CouchbaseLite.framework/Headers/CBLAuthenticator.h; sourceTree = "<group>"; };
+		61B229B31AA3398900887A10 /* CBLDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CBLDatabase.h; path = Frameworks/CouchbaseLite.framework/Headers/CBLDatabase.h; sourceTree = "<group>"; };
+		61B229B41AA3398900887A10 /* CBLDatabaseChange.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CBLDatabaseChange.h; path = Frameworks/CouchbaseLite.framework/Headers/CBLDatabaseChange.h; sourceTree = "<group>"; };
+		61B229B51AA3398900887A10 /* CBLDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CBLDocument.h; path = Frameworks/CouchbaseLite.framework/Headers/CBLDocument.h; sourceTree = "<group>"; };
+		61B229B61AA3398900887A10 /* CBLGeometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CBLGeometry.h; path = Frameworks/CouchbaseLite.framework/Headers/CBLGeometry.h; sourceTree = "<group>"; };
+		61B229B71AA3398900887A10 /* CBLJSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CBLJSON.h; path = Frameworks/CouchbaseLite.framework/Headers/CBLJSON.h; sourceTree = "<group>"; };
+		61B229B81AA3398900887A10 /* CBLManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CBLManager.h; path = Frameworks/CouchbaseLite.framework/Headers/CBLManager.h; sourceTree = "<group>"; };
+		61B229B91AA3398900887A10 /* CBLModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CBLModel.h; path = Frameworks/CouchbaseLite.framework/Headers/CBLModel.h; sourceTree = "<group>"; };
+		61B229BA1AA3398900887A10 /* CBLModelFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CBLModelFactory.h; path = Frameworks/CouchbaseLite.framework/Headers/CBLModelFactory.h; sourceTree = "<group>"; };
+		61B229BB1AA3398900887A10 /* CBLQuery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CBLQuery.h; path = Frameworks/CouchbaseLite.framework/Headers/CBLQuery.h; sourceTree = "<group>"; };
+		61B229BC1AA3398900887A10 /* CBLQuery+FullTextSearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CBLQuery+FullTextSearch.h"; path = "Frameworks/CouchbaseLite.framework/Headers/CBLQuery+FullTextSearch.h"; sourceTree = "<group>"; };
+		61B229BD1AA3398900887A10 /* CBLQuery+Geo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CBLQuery+Geo.h"; path = "Frameworks/CouchbaseLite.framework/Headers/CBLQuery+Geo.h"; sourceTree = "<group>"; };
+		61B229BE1AA3398900887A10 /* CBLReplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CBLReplication.h; path = Frameworks/CouchbaseLite.framework/Headers/CBLReplication.h; sourceTree = "<group>"; };
+		61B229BF1AA3398900887A10 /* CBLRevision.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CBLRevision.h; path = Frameworks/CouchbaseLite.framework/Headers/CBLRevision.h; sourceTree = "<group>"; };
+		61B229C01AA3398900887A10 /* CBLUITableSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CBLUITableSource.h; path = Frameworks/CouchbaseLite.framework/Headers/CBLUITableSource.h; sourceTree = "<group>"; };
+		61B229C11AA3398900887A10 /* CBLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CBLView.h; path = Frameworks/CouchbaseLite.framework/Headers/CBLView.h; sourceTree = "<group>"; };
+		61B229C21AA3398900887A10 /* CouchbaseLite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CouchbaseLite.h; path = Frameworks/CouchbaseLite.framework/Headers/CouchbaseLite.h; sourceTree = "<group>"; };
+		61B229C31AA3398900887A10 /* MYDynamicObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MYDynamicObject.h; path = Frameworks/CouchbaseLite.framework/Headers/MYDynamicObject.h; sourceTree = "<group>"; };
+		61C49FCF1A36E35E00EC772F /* js */ = {isa = PBXFileReference; lastKnownFileType = folder; path = js; sourceTree = "<group>"; };
+		61ED429F1A9EBAD900C9AEFE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9078307F19E5978A00521386 /* PGridHTMLTemplateFilenames.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PGridHTMLTemplateFilenames.plist; sourceTree = "<group>"; };
+		907E2EFD19FADB5100E63F1E /* main attachments */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "main attachments"; sourceTree = "<group>"; };
+		907E2EFE19FADB5100E63F1E /* main.cblite */ = {isa = PBXFileReference; lastKnownFileType = text; path = main.cblite; sourceTree = "<group>"; };
+		907E2EFF19FADB5100E63F1E /* roles attachments */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "roles attachments"; sourceTree = "<group>"; };
+		907E2F0019FADB5100E63F1E /* roles.cblite */ = {isa = PBXFileReference; lastKnownFileType = text; path = roles.cblite; sourceTree = "<group>"; };
+		907E2F0119FADB5100E63F1E /* system attachments */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "system attachments"; sourceTree = "<group>"; };
+		907E2F0219FADB5100E63F1E /* system.cblite */ = {isa = PBXFileReference; lastKnownFileType = text; path = system.cblite; sourceTree = "<group>"; };
+		907E2F0319FADB5100E63F1E /* users_mirror attachments */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "users_mirror attachments"; sourceTree = "<group>"; };
+		907E2F0419FADB5100E63F1E /* users_mirror.cblite */ = {isa = PBXFileReference; lastKnownFileType = text; path = users_mirror.cblite; sourceTree = "<group>"; };
+		9093FCE919E1C0B700AA282A /* Protogrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Protogrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		90B72F991A1E3B4800A02616 /* static */ = {isa = PBXFileReference; lastKnownFileType = folder; path = static; sourceTree = "<group>"; };
+		90C136601A1AA01E000A9CA2 /* PGridReplicatorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PGridReplicatorView.xib; sourceTree = "<group>"; };
+		90F20B1B19E1C14000EE88E6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		90F20B1C19E1C14000EE88E6 /* PGridmain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGridmain.m; sourceTree = "<group>"; };
+		90F20B1D19E1C14000EE88E6 /* PGridInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PGridInfo.plist; sourceTree = "<group>"; };
+		90F20B1F19E1C14000EE88E6 /* PGridReplication.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PGridReplication.plist; sourceTree = "<group>"; };
+		90F20B2019E1C14000EE88E6 /* PGridReplicationUnitTestsConfiguration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PGridReplicationUnitTestsConfiguration.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9093FCE619E1C0B700AA282A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61B2298F1AA3381700887A10 /* libz.dylib in Frameworks */,
+				61B2298D1AA3380900887A10 /* libsqlite3.dylib in Frameworks */,
+				6137F71A1A36E42B0005E3AD /* Protogrid_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		61B229851AA3338200887A10 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				61B229B01AA3397900887A10 /* CBLHeaders */,
+				61B2298E1AA3381700887A10 /* libz.dylib */,
+				61B2298C1AA3380900887A10 /* libsqlite3.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		61B229B01AA3397900887A10 /* CBLHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				61B229B11AA3398900887A10 /* CBLAttachment.h */,
+				61B229B21AA3398900887A10 /* CBLAuthenticator.h */,
+				61B229B31AA3398900887A10 /* CBLDatabase.h */,
+				61B229B41AA3398900887A10 /* CBLDatabaseChange.h */,
+				61B229B51AA3398900887A10 /* CBLDocument.h */,
+				61B229B61AA3398900887A10 /* CBLGeometry.h */,
+				61B229B71AA3398900887A10 /* CBLJSON.h */,
+				61B229B81AA3398900887A10 /* CBLManager.h */,
+				61B229B91AA3398900887A10 /* CBLModel.h */,
+				61B229BA1AA3398900887A10 /* CBLModelFactory.h */,
+				61B229BB1AA3398900887A10 /* CBLQuery.h */,
+				61B229BC1AA3398900887A10 /* CBLQuery+FullTextSearch.h */,
+				61B229BD1AA3398900887A10 /* CBLQuery+Geo.h */,
+				61B229BE1AA3398900887A10 /* CBLReplication.h */,
+				61B229BF1AA3398900887A10 /* CBLRevision.h */,
+				61B229C01AA3398900887A10 /* CBLUITableSource.h */,
+				61B229C11AA3398900887A10 /* CBLView.h */,
+				61B229C21AA3398900887A10 /* CouchbaseLite.h */,
+				61B229C31AA3398900887A10 /* MYDynamicObject.h */,
+			);
+			name = CBLHeaders;
+			sourceTree = "<group>";
+		};
+		90217A4019FAC72F00CD0AC6 /* Seed */ = {
+			isa = PBXGroup;
+			children = (
+				6176788D19FAEE64003AEB6F /* PGridSeedVersion */,
+				907E2EFD19FADB5100E63F1E /* main attachments */,
+				907E2EFE19FADB5100E63F1E /* main.cblite */,
+				907E2EFF19FADB5100E63F1E /* roles attachments */,
+				907E2F0019FADB5100E63F1E /* roles.cblite */,
+				907E2F0119FADB5100E63F1E /* system attachments */,
+				907E2F0219FADB5100E63F1E /* system.cblite */,
+				907E2F0319FADB5100E63F1E /* users_mirror attachments */,
+				907E2F0419FADB5100E63F1E /* users_mirror.cblite */,
+			);
+			path = Seed;
+			sourceTree = "<group>";
+		};
+		9093FCE019E1C0B700AA282A = {
+			isa = PBXGroup;
+			children = (
+				61ED429F1A9EBAD900C9AEFE /* README.md */,
+				6137F7191A36E42B0005E3AD /* Protogrid_iOS.framework */,
+				61C49FCF1A36E35E00EC772F /* js */,
+				90B72F991A1E3B4800A02616 /* static */,
+				6137F71B1A36E60F0005E3AD /* html */,
+				90F20B1A19E1C14000EE88E6 /* General */,
+				90F20B2A19E1C14000EE88E6 /* Sources */,
+				90217A4019FAC72F00CD0AC6 /* Seed */,
+				9093FCEA19E1C0B700AA282A /* Products */,
+				61B229851AA3338200887A10 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9093FCEA19E1C0B700AA282A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9093FCE919E1C0B700AA282A /* Protogrid.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		90F20B1A19E1C14000EE88E6 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				90F20B1D19E1C14000EE88E6 /* PGridInfo.plist */,
+				90F20B1C19E1C14000EE88E6 /* PGridmain.m */,
+				90F20B1F19E1C14000EE88E6 /* PGridReplication.plist */,
+				90F20B2019E1C14000EE88E6 /* PGridReplicationUnitTestsConfiguration.plist */,
+				9078307F19E5978A00521386 /* PGridHTMLTemplateFilenames.plist */,
+				90F20B1B19E1C14000EE88E6 /* Images.xcassets */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		90F20B2A19E1C14000EE88E6 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				90C136601A1AA01E000A9CA2 /* PGridReplicatorView.xib */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9093FCE819E1C0B700AA282A /* Protogrid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9093FD0C19E1C0B700AA282A /* Build configuration list for PBXNativeTarget "Protogrid" */;
+			buildPhases = (
+				6176788219F9034B003AEB6F /* ShellScript */,
+				614605DA1A36C1D700EC826A /* CopyFiles */,
+				9093FCE519E1C0B700AA282A /* Sources */,
+				9093FCE619E1C0B700AA282A /* Frameworks */,
+				9093FCE719E1C0B700AA282A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Protogrid;
+			productName = protogrid;
+			productReference = 9093FCE919E1C0B700AA282A /* Protogrid.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9093FCE119E1C0B700AA282A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "ATEGRA AG";
+				TargetAttributes = {
+					9093FCE819E1C0B700AA282A = {
+						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = 3PYFPK3C4Y;
+					};
+				};
+			};
+			buildConfigurationList = 9093FCE419E1C0B700AA282A /* Build configuration list for PBXProject "Protogrid" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9093FCE019E1C0B700AA282A;
+			productRefGroup = 9093FCEA19E1C0B700AA282A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9093FCE819E1C0B700AA282A /* Protogrid */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9093FCE719E1C0B700AA282A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				619A69671A119BC3005C315A /* PGridSeedVersion in Resources */,
+				6137F71C1A36E60F0005E3AD /* html in Resources */,
+				619A69681A119BC3005C315A /* main.cblite in Resources */,
+				619A69691A119BC3005C315A /* roles.cblite in Resources */,
+				619A696A1A119BC3005C315A /* system.cblite in Resources */,
+				619A696B1A119BC3005C315A /* users_mirror.cblite in Resources */,
+				61C49FD01A36E35E00EC772F /* js in Resources */,
+				90F20B3F19E1C14000EE88E6 /* PGridReplication.plist in Resources */,
+				90F20B3B19E1C14000EE88E6 /* Images.xcassets in Resources */,
+				90F20B4019E1C14000EE88E6 /* PGridReplicationUnitTestsConfiguration.plist in Resources */,
+				9078308019E5978B00521386 /* PGridHTMLTemplateFilenames.plist in Resources */,
+				90C136611A1AA01E000A9CA2 /* PGridReplicatorView.xib in Resources */,
+				90B72F9A1A1E3B4800A02616 /* static in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6176788219F9034B003AEB6F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = ./Resources/bundleInitialData.sh;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9093FCE519E1C0B700AA282A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61ED42A01A9EBAD900C9AEFE /* README.md in Sources */,
+				90F20B3C19E1C14000EE88E6 /* PGridmain.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		9093FD0A19E1C0B700AA282A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 0.1.0;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9093FD0B19E1C0B700AA282A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 0.1.0;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9093FD0D19E1C0B700AA282A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"ARCHS[sdk=*]" = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 0.2.5;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
+				);
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = "$(SRCROOT)/General/PGridInfo.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks/GRMustache/lib",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = Protogrid;
+				PROVISIONING_PROFILE = "";
+				VERSIONING_SYSTEM = "";
+			};
+			name = Debug;
+		};
+		9093FD0E19E1C0B700AA282A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 0.2.5;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
+				);
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/General/PGridInfo.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks/GRMustache/lib",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = Protogrid;
+				PROVISIONING_PROFILE = "";
+				VERSIONING_SYSTEM = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9093FCE419E1C0B700AA282A /* Build configuration list for PBXProject "Protogrid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9093FD0A19E1C0B700AA282A /* Debug */,
+				9093FD0B19E1C0B700AA282A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9093FD0C19E1C0B700AA282A /* Build configuration list for PBXNativeTarget "Protogrid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9093FD0D19E1C0B700AA282A /* Debug */,
+				9093FD0E19E1C0B700AA282A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9093FCE119E1C0B700AA282A /* Project object */;
+}

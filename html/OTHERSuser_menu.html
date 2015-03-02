@@ -1,0 +1,16 @@
+<div class="btn-group {{#placement_bottom}}dropup{{/placement_bottom}} user">
+	<a href="#" class="dropdown-toggle btn" data-toggle="dropdown">
+		{{#picture_available}}
+		<img src="http://projects.odoson.com/protogrid/img/robert_square.jpg" alt="Robert Baumgartner">
+		{{/picture_available}}
+		<div class="user-info">
+			<h3>{{ username }}</h3><span class="role">{{ role }}</span>
+		</div>
+		<span class='glyphicon glyphicon-cog'></span>
+		<div class="clear"></div>
+	</a>
+	<ul class="dropdown-menu">
+		<li><a href="javascript:void(0)" onclick="post_form(null, 'no_update_and_edit_related_card', null, 'org.couchdb.user:{{ user_id }}', '_users');" data-relatedkey="org.couchdb.user:{{ user_id }}" data-relatedappkey='_users' data-action='edit_related_card' data-modalname='saveChangesModal' class="btn" data-toggle="modal">{{ edit_user_profile_caption }}</a></li>
+		<li><a href="{{ logout_url }}">{{ logout_caption }}</a></li>
+	</ul>
+</div>

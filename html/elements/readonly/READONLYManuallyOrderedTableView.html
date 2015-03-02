@@ -1,0 +1,46 @@
+{{#inline}}
+<div>
+{{#table_data}}
+{{#rows}}
+{{ short_representation }}
+{{^is_last}}
+,
+{{/is_last}}
+{{/rows}}
+{{/table_data}}
+</div>
+{{/inline}}
+{{^inline}}
+<div class='form-group col-sm-{{ column_width }} tableview-formgroup'>
+	{{#before_first_save}}
+	<label for='{{ name }}'>{{ label }}</label>
+	<div>{{ save_first_hint }}</div>
+	{{/before_first_save}}
+	{{^before_first_save}}
+	<table class='table table-striped tableview manual-ordering {{#table_controls_in_header}}table-controls-in-header{{/table_controls_in_header}}' id='{{ name }}' data-label='{{ label }}' data-protokey='{{ proto_key }}' data-relatedappkey='{{ related_app_id }}' data-editable='false'>
+			{{#table_data}}
+			<thead>
+					<tr>
+						{{ #header_cells }}
+						<th data-identifier='{{ identifier }}' data-displaypriority='{{ display_priority }}'>{{ text }}</th>
+						{{ /header_cells }}
+					</tr>
+			</thead>
+			<tbody>
+					{{#rows}}
+					<tr data-key='{{ key }}'>
+						{{#cells}}
+						<td class='{{#disable_click_to_open}}no-click-to-open{{/disable_click_to_open}}' data-identifier='{{ identifier }}'>
+							{{{ content }}}
+						</td>
+						{{/cells}}
+					</tr>
+					{{/rows}}
+			</tbody>
+			{{/table_data}}
+	</table>
+	{{#validation_error}}<span class="help-block validation-error-text">{{ text }}</span>{{/validation_error}}
+	{{#help_text}}<span class="help-block">{{ text }}</span>{{/help_text}}
+	{{/before_first_save}}
+</div>
+{{/inline}}

@@ -1,0 +1,10 @@
+<div class='col-lg-12'>
+	<div class='form-group'>
+		<p>{{ description }}</p>
+		<select class="form-control static-choice" name='{{ name }}' id='{{ choice_id }}'>
+		{{#dialog_choices}}
+			<option value='{{ value }}' {{#selected}}selected='selected'{{/selected}}>{{ label }}</option>
+		{{/dialog_choices}}
+		</select>
+	</div>
+</div>

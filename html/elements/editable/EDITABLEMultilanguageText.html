@@ -1,0 +1,17 @@
+<div class="col-sm-{{ column_width }}">
+	<div class="form-group">
+		{{^disable_label}}
+		<label for="{{ name }}">{{ label }}</label>
+		{{/disable_label}}
+		{{#edit_options_available}}
+		<div class="input-group">
+		{{/edit_options_available}}
+			<input type="text" class="form-control to-be-posted" name='{{ name }}' lang="{{ language }}" spellcheck="true" value='{{ value }}'{{#edit_options_available}} disabled{{/edit_options_available}}>
+			{{{ edit_options }}}
+		{{#edit_options_available}}
+		</div>
+		{{/edit_options_available}}
+		{{#validation_error}}<span class="help-block validation-error-text">{{ text }}</span>{{/validation_error}}
+		{{#help_text}}<span class="help-block">{{ text }}</span>{{/help_text}}
+	</div>
+</div>

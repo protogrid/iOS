@@ -1,0 +1,57 @@
+<div class='form-group col-sm-{{ column_width }} tableview-formgroup'>
+	{{#before_first_save}}
+	<label for='{{ name }}'>{{ label }}</label>
+	<div>{{ save_first_hint }}</div>
+	<table style='display:none'>
+		{{#table_data}}
+		<tbody>
+			{{#rows}}
+			<tr data-key='{{ key }}'></tr>
+			{{/rows}}
+		</tbody>
+		{{/table_data}}
+	</table>
+	{{/before_first_save}}
+	{{^before_first_save}}
+	{{{ edit_options }}}
+	<table class='table table-striped tableview manual-ordering {{#table_controls_in_header}}table-controls-in-header{{/table_controls_in_header}}' id='{{ name }}' data-label='{{ label }}' data-protokey='{{ proto_key }}' data-creationprotokey='{{ creation_proto_key }}' data-relatedappkey='{{ related_app_id }}' data-allow-new-cards='{{ allow_new_cards }}' data-editable='true'>
+			{{#table_data}}
+			<thead>
+					<tr>
+						{{#use_select_column}}
+						<th class="non-compressible fixed-at-beginning-of-table always-visible"></th>
+						{{/use_select_column}}
+						<th class="non-compressible fixed-at-beginning-of-table always-visible"></th>
+						{{#header_cells}}
+						<th data-identifier='{{ identifier }}' data-displaypriority='{{ display_priority }}'>
+							{{^use_icon}}{{ text }}{{/use_icon}}
+							{{#use_icon}}<span class="glyphicon glyphicon-{{ icon_name }}"></span>{{/use_icon}}
+						</th>
+						{{/header_cells}}
+					</tr>
+			</thead>
+			<tbody>
+					{{#rows}}
+					<tr data-key='{{ key }}'>
+						{{#use_select_column}}
+						<td class="no-click-to-open">
+							<input type="checkbox" name="selected_{{ name }}" value="{{ key }}">
+						</td>
+						{{/use_select_column}}
+						<td class="no-click-to-open">
+							<span class="glyphicon glyphicon-align-justify"></span>
+						</td>
+						{{#cells}}
+						<td class='{{#disable_click_to_open}}no-click-to-open{{/disable_click_to_open}}' data-identifier='{{ identifier }}'>
+							{{{ content }}}
+						</td>
+						{{/cells}}
+					</tr>
+					{{/rows}}
+			</tbody>
+			{{/table_data}}
+	</table>
+	{{#validation_error}}<span class="help-block validation-error-text">{{ text }}</span>{{/validation_error}}
+	{{#help_text}}<span class="help-block">{{ text }}</span>{{/help_text}}
+	{{/before_first_save}}
+</div>

@@ -1,0 +1,41 @@
+{{#edit_options_available}}
+<div class="input-group-btn {{#dropup}}dropup{{/dropup}} edit-options">
+	{{#edit_option_count_one}}
+	{{#edit_options}}
+	{{#client_side}}
+	<button type="button" class="btn btn-default {{ bootstrap_btn_class }} {{action}} {{#show_label}}full-width{{/show_label}} {{#show_modal}}modal-caller{{/show_modal}} {{#use_character_icon}}button-with-character-icon{{/use_character_icon}}" {{#show_modal}}data-toggle="modal" data-target="#{{ modal_id }}" data-id="{{ name }}" data-relatedkey='{{ related_key }}' data-relatedappkey='{{ related_app_id }}' data-action="{{ action }}"{{/show_modal}} {{#is_disabled}}disabled{{/is_disabled}}>
+		{{#show_label}}{{ edit_group_label }}{{/show_label}}{{#use_character_icon}}{{ character_icon }}{{/use_character_icon}}{{^use_character_icon}}&nbsp;<span class="glyphicon glyphicon-{{ icon }}">{{/use_character_icon}}
+	</button>
+	{{/client_side}}
+	{{^client_side}}
+	<button type="button" class="btn btn-default {{ bootstrap_btn_class }} {{#show_label}}full-width{{/show_label}} {{#use_character_icon}}button-with-character-icon{{/use_character_icon}}" onclick="post_form(null, '{{ no_update_action }}', '{{ name }}', '{{ related_key }}', '{{ related_app_id }}');" data-id="{{ name }}" data-relatedkey='{{ related_key }}' data-relatedappkey='{{ related_app_id }}' data-action="{{ action }}" data-modalname='saveChangesModal' data-toggle="modal" {{#is_disabled}}disabled{{/is_disabled}}>
+		{{#show_label}}{{ edit_group_label }}{{/show_label}}{{#use_character_icon}}{{ character_icon }}{{/use_character_icon}}{{^use_character_icon}}&nbsp;<span class="glyphicon glyphicon-{{ icon }}">{{/use_character_icon}}
+	</button> <!-- nbsp is a workaround for a height aligning problem in BS 3.0.0 -->
+	{{/client_side}}
+	{{/edit_options}}
+	{{/edit_option_count_one}}
+	{{^edit_option_count_one}}
+	<button type="button" class="btn btn-default {{ bootstrap_btn_class }} dropdown-toggle {{#show_label}}full-width{{/show_label}}" data-toggle="dropdown" {{#is_disabled}}disabled{{/is_disabled}}>
+		{{#show_label}}{{ edit_group_label }}{{/show_label}}{{#group_icon_available}}&nbsp;<span class="glyphicon glyphicon-{{ group_icon }}"></span>{{/group_icon_available}}{{^group_icon_available}}&nbsp;<span class="caret"></span>{{/group_icon_available}}
+	</button> <!-- nbsp is a workaround for a height aligning problem in BS 3.0.0 -->
+	<ul class="dropdown-menu pull-right">
+		{{#edit_options}}
+		{{#client_side}}
+		<li>
+			<a href="javascript:void(0)" role="button" class="btn {{action}} {{#show_modal}}modal-caller{{/show_modal}}" {{#show_modal}}data-toggle="modal" data-target="#{{ modal_id }}" data-id="{{ name }}" data-relatedkey='{{ related_key }}' data-relatedappkey='{{ related_app_id }}' data-action="{{ action }}"{{/show_modal}} {{#is_disabled}}disabled{{/is_disabled}}>
+				{{ label }}
+			</a>
+		</li>
+		{{/client_side}}
+		{{^client_side}}
+		<li>
+			<a href="javascript:void(0)" onclick="post_form(null, '{{ no_update_action }}', '{{ name }}', '{{ related_key }}', '{{ related_app_id }}');" data-id="{{ name }}" data-relatedkey='{{ related_key }}' data-relatedappkey='{{ related_app_id }}' data-action="{{ action }}" data-modalname='saveChangesModal' role="button" class="btn" data-toggle="modal" {{#is_disabled}}disabled{{/is_disabled}}>
+				{{ label }}
+			</a>
+		</li>
+		{{/client_side}}
+		{{/edit_options}}
+	</ul>
+	{{/edit_option_count_one}}
+</div>
+{{/edit_options_available}}

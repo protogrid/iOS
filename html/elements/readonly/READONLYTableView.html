@@ -1,0 +1,32 @@
+<div class='form-group col-sm-{{ column_width }} tableview-formgroup' id='tableview_formgroup_{{ name }}'>
+	{{#show_first_save_hint_instead}}
+	<label for='{{ name }}'>{{ label }}</label>
+	<div>{{ save_first_hint }}</div>
+	{{/show_first_save_hint_instead}}
+	{{^show_first_save_hint_instead}}
+	{{{ edit_options }}}
+	<table class='table table-striped tableview ajax-ordering {{#table_controls_in_header}}table-controls-in-header{{/table_controls_in_header}}' id='{{ name }}' data-label='{{ label }}' data-protokey='{{ proto_key }}' data-creationprotokey='{{ creation_proto_key }}' data-origin='{{{ tableview_json_url }}}' data-tableheight='{{ table_height }}' data-relatedappkey='{{ related_app_id }}' data-filter-column-keys-by-element='{{{ filter_column_keys_by_element }}}' data-column-keys-available-for-multiindex='{{{ column_keys_available_for_multiindex }}}' data-show-create-button='{{ show_create_button }}'>
+			{{#table_data}}
+			<thead>
+					<tr>
+						{{#use_select_column}}
+						<th data-identifier='&&select' class="non-compressible fixed-at-beginning-of-table always-visible non-sortable"><input type='checkbox' class='no-click-to-open selected-all' name='selected_all_{{ name }}' value='&&all'></th>
+						{{/use_select_column}}
+						{{ #header_cells }}
+						<th data-identifier='{{ identifier }}' data-displaypriority='{{ display_priority }}' class='{{^is_sortable}}non-sortable{{/is_sortable}}'>
+							{{^use_icon}}{{ text }}{{/use_icon}}
+							{{#use_icon}}<span class="glyphicon glyphicon-{{ icon_name }}"></span>{{/use_icon}}
+						</th>
+						{{ /header_cells }}
+					</tr>
+			</thead>
+			<tbody>
+				<!-- table data will be injected here using datatables ajax -->
+			</tbody>
+			{{/table_data}}
+	</table>
+	{{#validation_error}}<span class="help-block validation-error-text">{{ text }}</span>{{/validation_error}}
+	{{#help_text}}<span class="help-block">{{ text }}</span>{{/help_text}}
+	<input type="hidden" class='last_request_body' name="last_request_body_{{ name }}">
+	{{/show_first_save_hint_instead}}
+</div>

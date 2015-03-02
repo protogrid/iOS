@@ -1,0 +1,13 @@
+{{^inline}}
+<div class='col-sm-{{ column_width }}'>
+	<div class='form-group'>
+		<label for='{{ name }}'>{{ label }}</label>
+		<select class="form-control static-choice to-be-posted" name='{{ name }}'>
+			<option value='Yes' {{#value}}selected='selected'{{/value}}>{{ yes_text }}</option>
+			<option value='No' {{^value}}selected='selected'{{/value}}>{{ no_text }}</option>
+		</select>
+		{{#validation_error}}<span class="help-block validation-error-text">{{ text }}</span>{{/validation_error}}
+		{{#help_text}}<span class="help-block">{{ text }}</span>{{/help_text}}
+	</div>
+</div>
+{{/inline}}

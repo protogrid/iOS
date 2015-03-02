@@ -1,0 +1,10 @@
+{{^inline}}
+<div class='col-sm-{{ column_width }}'>
+	<div class="form-group readonly">
+		<label for="{{ name }}">{{ label }}</label>
+		{{/inline}}
+		<div class='input-placeholder'>{{ value }}</div>
+		{{^inline}}
+	</div>
+</div>
+{{/inline}}

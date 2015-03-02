@@ -1,0 +1,12 @@
+{{^inline}}
+<div class='col-sm-{{ column_width }}'>
+	<div class='form-group'>
+		<label for='{{ name }}'>{{ label }}</label>
+		{{/inline}}
+		<input class="form-control{{#validation_error}} validation-error{{/validation_error}} to-be-posted" name='{{ name }}' type="file">
+		{{^inline}}
+		{{#validation_error}}<span class="help-block validation-error-text">{{ text }}</span>{{/validation_error}}
+		{{#help_text}}<span class="help-block">{{ text }}</span>{{/help_text}}
+	</div>
+</div>
+{{/inline}}

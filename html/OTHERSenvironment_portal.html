@@ -1,0 +1,70 @@
+<!--<div class='row'>
+	<div class='col-lg-12'>
+		<form class='form-horizontal' method=post>
+			<p><button type='submit' class='btn btn-primary btn-large'>{{ create_application_label }}</button></p>
+		</form>
+	</div>
+</div>-->
+<div class="header">
+	<div class="navigation">
+		<ul>
+			<li><a href="#" class="btn title">{{ environment_title }}</a></li>
+			{{#show_environment_settings}}
+			<li><a href="javascript:void(0)" onclick="post_form(null, 'no_update_and_edit_related_card', null, '&&environmentProperties', 'environment_properties');" data-relatedkey="&&environmentProperties" data-relatedappkey='environment_properties' data-action='edit_related_card' data-modalname='saveChangesModal' class="btn" data-toggle="modal">{{ environment_settings_label }}</a></li>
+			{{/show_environment_settings}}
+			<li><a href="http://www.protogrid.com/">{{ about_protogrid_label }}</a></li>
+			<li><a href="mailto:protogrid@ategra.ch?subject=Protogrid%20Feedback">{{ issues_label }}</a></li>
+		</ul>
+	</div>
+	{{{ user_menu }}}
+	<div class="clear"></div>
+</div>
+<div class='row environment-portal'>
+	{{#show_create_application}}
+	<div class='col-md-4 col-sm-6'>
+		<form class='form-horizontal' method=post>
+			<p><button type='submit' class='btn btn-primary btn-large'>{{ create_application_label }}</button></p>
+		</form>
+	</div>
+	{{/show_create_application}}
+	{{#applications}}
+	<div class='col-md-4 col-sm-6'>
+		<div class='thumbnail thumbnail-{{ theme_color }}'>
+			<div class="application-icon" style="background-image:url({{ logo_url }});"></div>
+			<div class='caption'>
+				<h3><a href='{{{ url }}}'><span class='table'><span class='table-cell'>{{ title }}</span></span></a></h3>
+				<p>{{ description }}</p>
+			</div>
+			{{#show_app_delete_button}}<a href="#deleteModal" class="deleteApplication" data-id="{{ name }}" role="button" class="btn" data-toggle="modal"><span class="glyphicon glyphicon-trash"></span></a>{{/show_app_delete_button}}
+			<div class="clear"></div>
+		</div>
+	</div>
+	{{/applications}}
+	<div class="clear"></div>
+</div>
+<div class="modal" id="deleteModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">{{ delete_modal_title }}</h4>
+			</div>
+			<div class="modal-body">
+				{{ delete_modal_description }}
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn" data-dismiss="modal">{{ cancel_label }}</a>
+				<a href="?delete=app_id" class="btn btn-alert">{{ confirm_label }}</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="footer">
+	<p>Version {{ version }}; Powered by Protogrid.</p>
+</div>
+<script>
+$("a[href$='deleteModal']").click(function() {
+	var app_id = $(this).data('id');
+	$("a[href$='app_id']").prop("href", "?delete=" + app_id)
+});
+</script>

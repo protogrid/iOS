@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=9">
+		{{={{{ }}}=}}
+		{{#css_files}}
+		<link href='{{ root_denominator }}static/css/{{ css_file_name }}' rel='stylesheet' media='screen'>
+		{{/css_files}}
+		{{{={{ }}=}}}
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-title" content="Protogrid">
+		<meta name="format-detection" content="telephone=no">
+		<style>html { -webkit-text-size-adjust: 100%; }</style>
+
+		<!-- Icons -->
+		<!-- iOS 7 iPad (retina) -->
+        <link href="{{ root_denominator }}static/icons/protogrid-152.png"
+              sizes="152x152"
+              rel="apple-touch-icon">
+
+        <!-- iOS 6 iPad (retina) -->
+        <link href="{{ root_denominator }}static/icons/protogrid-144.png"
+              sizes="144x144"
+              rel="apple-touch-icon">
+
+        <!-- iOS 7 iPhone (retina) -->
+        <link href="{{ root_denominator }}static/icons/protogrid-120.png"
+              sizes="120x120"
+              rel="apple-touch-icon">
+
+        <!-- iOS 6 iPhone (retina) -->
+        <link href="{{ root_denominator }}static/icons/protogrid-114.png"
+              sizes="114x114"
+              rel="apple-touch-icon">
+
+        <!-- iOS 7 iPad -->
+        <link href="{{ root_denominator }}static/icons/protogrid-76.png"
+              sizes="76x76"
+              rel="apple-touch-icon">
+
+        <!-- iOS 6 iPad -->
+        <link href="{{ root_denominator }}static/icons/protogrid-72.png"
+              sizes="72x72"
+              rel="apple-touch-icon">
+
+        <!-- iOS 6 iPhone -->
+        <link href="{{ root_denominator }}static/icons/protogrid-57.png"
+              sizes="57x57"
+              rel="apple-touch-icon">
+
+		<script type="text/javascript" language="javascript" charset="utf-8">
+		$SCRIPT_ROOT = '{{{ script_root }}}';
+		$CURRENT_PATH = '{{{ current_path }}}';
+		$CREATE_LABEL = '{{ create_label }}';
+		$ADD_LABEL = '{{ add_label }}';
+		$ROWS_PER_AJAX_REQUEST = '{{ rows_per_ajax_request }}';
+		$PREFERRED_LOCALE = '{{ preferred_locale }}';
+		$APP_LOCALE = '{{ app_locale }}';
+		$DATETIME_LOCALE = '{{ datetime_locale }}';
+		{{={{{ }}}=}}$CLIENT = '{{ client }}'{{{={{ }}=}}};
+		</script>
+		<title>Protogrid</title>
+		{{={{{ }}}=}}
+		{{#header_scripts}}
+		<script type="text/javascript" language="javascript" src='{{ root_denominator }}static/js/{{ script_file_name }}'></script>
+		{{/header_scripts}}
+		{{{={{ }}=}}}
+		<script type="text/javascript" language="javascript" src="{{ root_denominator }}static/js/de.js"></script>
+		<!--[if lt IE 9]>
+		<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body class='{{={{{ }}}=}} {{ page_classes }} {{{={{ }}=}}} {{ theme_class }}'>
+		<div class='container' data-app-id='{{ application_id }}'>
+			{{={{{ }}}=}}
+			<!-- Now only triple braces will be interpreted as tags on the server side -->
+			<!-- Double braces will be passed through literally -->
+			{{#log_available}}
+			<div class="panel-group" id="accordion">
+			{{/log_available}}
+				{{#errors_available}}
+					{{#errors}}
+						<div class="notification error">
+							{{ text }}
+						</div>
+					{{/errors}}
+				{{/errors_available}}
+				{{#warnings_available}}
+					{{#warnings}}
+						<div class="notification warning">
+							{{ text }}
+						</div>
+					{{/warnings}}
+				{{/warnings_available}}
+				{{#messages_available}}
+					{{#messages}}
+						<div class="notification message">
+							{{ text }}
+						</div>
+					{{/messages}}
+				{{/messages_available}}
+			{{#log_available}}
+			</div>
+			{{/log_available}}
+			{{{={{ }}=}}}
+			<div class='row'>
+				{{#menus_available}}
+				<div class="col-md-3 sidebar-nav">
+					<div class="inner">
+						<div class="header">
+							{{#show_environment_link}}
+							<span class="backspan"><a href="javascript:void(0)" onclick="post_form(null, 'no_update_and_open_environment_portal');" data-action='open_environment_portal' data-modalname='saveChangesModal' data-toggle="modal" class="back">Back</a></span>
+							{{/show_environment_link}}
+							<span class="logospan"><a href="javascript:void(0)" onclick="post_form(null, 'no_update_and_put_as_new_appnavroot_and_edit_related_card');" data-action='put_as_new_appnavroot_and_edit_related_card' data-modalname='saveChangesModal' data-toggle="modal" class="logo {{^show_environment_link}}without-environment-link{{/show_environment_link}}" style="background-image:url({{ application_logo_url }});">{{ application_title }}</a></span>
+							{{#app_title_available}}
+							<span class="titlespan"><a href="javascript:void(0)" onclick="post_form(null, 'no_update_and_put_as_new_appnavroot_and_edit_related_card');" data-action='put_as_new_appnavroot_and_edit_related_card' data-modalname='saveChangesModal' data-toggle="modal" class="{{^show_environment_link}}without-environment-link{{/show_environment_link}}"><span class="table {{^show_environment_link}}without-environment-link{{/show_environment_link}}"><span class="table-cell">{{ application_title }}</span></span></a></span>
+							{{/app_title_available}}
+							<div class="clear"></div>
+						</div>
+						<div class="menus-holder">
+							{{#menus}}
+							<div class="menu-sidebar hidden-print" role="complementary" data-menu-id='{{ menu_card_id }}'>
+								<ul class="nav menu-sidenav">
+									{{#title_available}}
+									<li class="nav-header">{{ menu_title }}<span class="icon"></span></li>
+									{{/title_available}}
+									{{#menu_entries}}
+									<li class="nav-item"><a href="javascript:void(0)" onclick="post_form(null, 'no_update_and_put_as_new_appnavroot_and_edit_related_card', null, '{{ entry_key }}');" data-relatedkey="{{ entry_key }}" data-action='put_as_new_appnavroot_and_edit_related_card' data-modalname='saveChangesModal' class="" data-toggle="modal"><span class="color color-{{ theme_color }}"></span>{{ label }}</a></li>
+									{{/menu_entries}}
+								</ul>
+							</div>
+							{{/menus}}
+						</div>
+						{{{ user_menu }}}
+					</div>
+				</div>
+				<div class="proto-content-holder">
+					<div class='col-md-9 proto-content'>
+					{{{ content }}}
+					</div>
+				</div>
+				{{/menus_available}}
+				{{^menus_available}}
+				<div class="proto-content-holder">
+					<div class='col-md-12 proto-content'>
+					{{{ content }}}
+					</div>
+				</div>
+				{{/menus_available}}
+			</div>
+		</div>
+		<!-- Placed at the end of the document so the pages load faster -->
+		{{={{{ }}}=}}
+		{{#footer_scripts}}
+		<script type="text/javascript" language="javascript" src="{{ root_denominator }}static/js/{{ script_file_name }}" charset="utf-8"></script>
+		{{/footer_scripts}}
+		<script type="text/javascript" language="javascript" src="{{ root_denominator }}static/js/ace.js" charset="utf-8"></script>
+		{{{={{ }}=}}}
+	</body>
+</html>
