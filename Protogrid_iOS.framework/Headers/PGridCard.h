@@ -22,6 +22,7 @@
 - (NSDictionary*) get_design_element:(NSString*)identifier default_value:(id)default_value;
 - (NSDictionary*) get_design_element:(NSString*)identifier;
 - (id) get_design_elements;
+- (NSArray*) get_all_design_element_identifiers;
 - (void) set_design_element:(NSString*)identifier content:(id)content;
 - (void) append_design_element:(NSString*)identifier content:(id)content;
 - (id) get:(NSString*)identifier default_value:(id)default_value;

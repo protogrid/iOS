@@ -42,6 +42,7 @@
 - (void) log_replication_message:(NSString*)message;
 - (PGridCard*) resolve_key:(NSString*)card_key app_id:(NSString*)app_id;
 - (PGridCard*) resolve_key:(NSString*)card_key app_id:(NSString*)app_id fallback_to_system_app:(BOOL)fallback_to_system_app force_cache:(BOOL)force_cache;
++ (NSString*) get_multilanguage_string_from_object_indexed_by_language:(NSDictionary*)language_index languages:(NSArray*)languages app:(PGridApplication*)app;
 - (NSString*) get_multilanguage_text:(NSString*)ml_key app_id:(NSString*)app_id default_text:(NSString*)default_text force_cache:(BOOL)force_cache;
 - (void) launch_replication_in_continuous_mode:(BOOL)is_continuous;
 - (void) disable_replication;

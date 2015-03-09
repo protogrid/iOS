@@ -30,7 +30,7 @@
 		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>
-	<string>com.protogrid.testApp</string>
+	<string>[ENTER A NEW BUNDLE IDENTIFIER HERE (SEE README.md)]</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

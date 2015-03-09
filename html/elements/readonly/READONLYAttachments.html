@@ -1,5 +1,5 @@
 {{#inline}}
-<div>
+<div {{#hidden_in_client}}style="display:none;"{{/hidden_in_client}}>
 {{#table_data}}
 {{#rows}}
 {{ filename }}
@@ -11,7 +11,7 @@
 </div>
 {{/inline}}
 {{^inline}}
-<div class='form-group col-sm-{{ column_width }}'>
+<div class='form-group col-sm-{{ column_width }}' {{#hidden_in_client}}style="display:none;"{{/hidden_in_client}}>
 	{{#before_first_save}}
 	<label for='{{ name }}'>{{ label }}</label>
 	<div>{{ save_first_hint }}</div>

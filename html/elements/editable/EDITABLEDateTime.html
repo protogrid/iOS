@@ -1,4 +1,4 @@
-<div class='col-sm-{{ column_width }}'>
+<div class='col-sm-{{ column_width }}' {{#hidden_in_client}}style="display:none;"{{/hidden_in_client}}>
 	<div class="form-group">
 		<label for="{{ name }}">{{ label }}</label>
 		<input type="text" name='{{ name }}' class="datetime date form-control{{#validation_error}} validation-error{{/validation_error}} to-be-posted" data-date-format="dd L LT" data-utc-iso='{{ value }}'>

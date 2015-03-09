@@ -1,4 +1,4 @@
-<div class='form-group col-sm-{{ column_width }} tableview-formgroup' id='tableview_formgroup_{{ name }}'>
+<div class='form-group col-sm-{{ column_width }} tableview-formgroup' id='tableview_formgroup_{{ name }}' {{#hidden_in_client}}style="display:none;"{{/hidden_in_client}}>
 	{{#show_first_save_hint_instead}}
 	<label for='{{ name }}'>{{ label }}</label>
 	<div>{{ save_first_hint }}</div>

@@ -16,11 +16,12 @@ Basic Setup
 3. Set the following properties in `General/PGridInfo.plist`:
   a. Application Database ID. You find this by opening any Card in your application and clicking `This Card -> Show Properties`.
   b. Protogrid Host. This is your environment root URL without `http://`, e.g. `my-environment.protogrid.com`.
-  c. (optional) Application Version.
-  d. (optional) Bundle display name.
+  c. Bundle Identifier. This is used by Apple to identify your app and should be of the form "com.your-organization.your-department.your-appname". It is important to choose a different Bundle Identifier for each of your apps.
+  d. (optional) Application Version.
+  e. (optional) Bundle display name.
 4. Choose a Simulator as your build target and build & run the project (the 'play' button).
 5. The initial replication of your application will begin. Please read the instructions on the screen carefully and follow them until you get to a success message. This should take 1-2 minutes, depending on your internet connection, and will download all design data associated with your application into an initial database state.
-6. Your app should now build & run both on device and simulator. From here you can use any of Apple's provided rollout options (Enterprise rollout, Testflight internal testing, Testflight Beta testing, AppStore).
+6. Your app should now build & run both on device and simulator. From here you can use any of Apple's provided rollout options (Enterprise rollout, Testflight internal testing, Testflight Beta testing, AppStore). Make sure to select the Release build scheme for the archive build you'd like to submit.
 
 Versioning
 ----------

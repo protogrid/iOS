@@ -1,4 +1,4 @@
-<div class="col-sm-{{ column_width }}">
+<div class="col-sm-{{ column_width }}" {{#hidden_in_client}}style="display:none;"{{/hidden_in_client}}>
 	<div class="form-group">
 		{{^disable_label}}
 		<label for="{{ name }}">{{ label }}</label>

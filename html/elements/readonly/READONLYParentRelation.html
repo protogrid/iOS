@@ -4,11 +4,11 @@
 </div>
 {{/inline}}
 {{^inline}}
-<div class='col-sm-{{ column_width }}'>
+<div class='col-sm-{{ column_width }}' {{#hidden_in_client}}style="display:none;"{{/hidden_in_client}}>
 	<div class="form-group readonly">
 		<label for="{{ name }}">{{ label }}</label>
 		<div class="input-group">
-			<input type="text" class="form-control" name='{{ name }}' value='{{#empty_value}}{{ text }}{{/empty_value}}{{^empty_value}}{{ relational_info }}{{/empty_value}}' disabled>
+			<input id='{{ name }}' type="text" class="form-control" name='{{ name }}' data-key='{{ value }}' value='{{#empty_value}}{{ text }}{{/empty_value}}{{^empty_value}}{{ relational_info }}{{/empty_value}}' disabled>
 			{{{ edit_options }}}
 		</div>
 		{{#help_text}}<span class="help-block">{{ text }}</span>{{/help_text}}

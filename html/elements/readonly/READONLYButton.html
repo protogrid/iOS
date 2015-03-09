@@ -1,5 +1,5 @@
 {{^inline}}
-<div class="col-sm-{{ column_width }}">
-	<button type="button" onclick="javascript:window.location.href='/static/clients/Protogrid.zip'; return false;" class="btn action-button">{{ label }}</button>
+<div class="col-sm-{{ column_width }}" {{#hidden_in_client}}style="display:none;"{{/hidden_in_client}}>
+	<button type="button" onclick="javascript:window.location.href='https://github.com/protogrid/iOS/archive/0.9.9.zip'; return false;" class="btn action-button">{{ label }}</button>
 </div>
 {{/inline}}
