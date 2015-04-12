@@ -47,5 +47,6 @@
 - (void) launch_replication_in_continuous_mode:(BOOL)is_continuous;
 - (void) disable_replication;
 - (void) update_replication_status;
+- (void) delete_all_data_with_trigger:(NSString*)trigger;
 
 @end
