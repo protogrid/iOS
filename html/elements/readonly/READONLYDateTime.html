@@ -3,7 +3,8 @@
 	<div class="form-group readonly">
 		<label for="{{ name }}">{{ label }}</label>
 		{{/inline}}
-		<div class='datetime input-placeholder' data-utc-iso='{{ value }}'></div>
+		<div class='datetime input-placeholder' data-datetime-display-setting="{{ datetime_display_setting }}" data-utc-iso='{{ value }}'></div>
 		{{^inline}}
+	</div>
 </div>
 {{/inline}}

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Commons.h"
 
 @interface HelperFunctions : NSObject
 

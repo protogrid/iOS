@@ -27,7 +27,6 @@
 @property (strong) NSMutableDictionary *applications_by_db_id;
 @property (strong) NSString *user_id;
 @property (strong) NSString *user_email;
-@property (strong) PGridCard *default_card;
 @property (strong) PGridCardService *card_service;
 @property (strong) NSMutableDictionary *session;
 @property (strong) NSMutableArray *flashed_messages;

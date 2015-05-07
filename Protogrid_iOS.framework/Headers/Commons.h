@@ -33,3 +33,7 @@
 
 @interface UserErrorException : NSException
 @end
+
+
+@interface ScriptLibraryException : NSException
+@end
