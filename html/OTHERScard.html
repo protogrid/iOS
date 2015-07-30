@@ -30,7 +30,7 @@
 		</div> <!-- .card-actions-inner-->
 	</div> <!-- .card-actions -->
 	{{/card_actions_available}}
-	<div class="card-content">
+	<div class="card-content {{^card_actions_available}}no-card-actions{{/card_actions_available}}">
 		<fieldset>
 			{{{ rows }}}
 		</fieldset>
