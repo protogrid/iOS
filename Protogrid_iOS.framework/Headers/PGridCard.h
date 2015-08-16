@@ -30,5 +30,6 @@
 - (void) set:(NSString*)identifier object:(id)object;
 - (NSDictionary*) get_raw_card;
 - (NSString*) repr;
+- (id) proto_key;
 
 @end

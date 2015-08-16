@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="opensans-light-webfont.ttf">
@@ -28,12 +28,12 @@
             <connections>
                 <outlet property="buttonSynchronizeNow" destination="gNh-J8-lEx" id="zLf-CW-cn0"/>
                 <outlet property="continuousSwitch" destination="U55-91-r9c" id="XUP-GZ-GJz"/>
-                <outlet property="credentialsEmail" destination="CIL-0t-QDf" id="ZZu-da-QVG"/>
+                <outlet property="generalInfo" destination="FKQ-08-zi2" id="fYK-5Q-RW5"/>
                 <outlet property="imageView" destination="K5A-2v-kt8" id="XfC-R4-cOi"/>
+                <outlet property="loginInfo" destination="CIL-0t-QDf" id="Cxg-LB-DWn"/>
                 <outlet property="navigation_item" destination="SmM-BK-33P" id="0UT-pQ-LvT"/>
                 <outlet property="synchronizationInfo" destination="QlT-Zg-Edn" id="Ke5-8u-Px5"/>
                 <outlet property="synchronizationStatus" destination="Sk3-Eo-UJh" id="bwQ-AU-xJt"/>
-                <outlet property="versionInfo" destination="FKQ-08-zi2" id="bWI-0H-auu"/>
                 <outlet property="view" destination="x0T-iu-pQ6" id="HI7-We-agU"/>
             </connections>
         </placeholder>
@@ -61,7 +61,7 @@
                             <color key="textColor" red="0.45098039215686275" green="0.45098039215686275" blue="0.45098039215686275" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="failure!" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKQ-08-zi2">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="computed" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FKQ-08-zi2">
                             <rect key="frame" x="20" y="523" width="560" height="18"/>
                             <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="13"/>
                             <color key="textColor" white="0.45000000000000001" alpha="1" colorSpace="calibratedWhite"/>
@@ -75,9 +75,9 @@
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QlT-Zg-Edn">
                             <rect key="frame" x="20" y="272" width="560" height="53"/>
-                            <string key="text">failure.
-failure.
-failure!</string>
+                            <string key="text">computed
+computed
+computed</string>
                             <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="13"/>
                             <color key="textColor" white="0.45000000000000001" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
@@ -91,7 +91,7 @@ failure!</string>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cog-gray.png" translatesAutoresizingMaskIntoConstraints="NO" id="K5A-2v-kt8">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="static/images/cog-gray.png" translatesAutoresizingMaskIntoConstraints="NO" id="K5A-2v-kt8">
                             <rect key="frame" x="560" y="21" width="20" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="gHV-Pp-IgC"/>
@@ -141,13 +141,13 @@ failure!</string>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credentials Email Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFp-hF-Ym3">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login Info" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFp-hF-Ym3">
                             <rect key="frame" x="20" y="355" width="560" height="23"/>
                             <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version Info" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6B-8W-yl0">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="General Info" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6B-8W-yl0">
                             <rect key="frame" x="20" y="495" width="560" height="23"/>
                             <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -165,7 +165,7 @@ failure!</string>
                             <color key="textColor" white="0.45000000000000001" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="failure!" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIL-0t-QDf">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="computed" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CIL-0t-QDf">
                             <rect key="frame" x="20" y="383" width="560" height="18"/>
                             <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="13"/>
                             <color key="textColor" white="0.45000000000000001" alpha="1" colorSpace="calibratedWhite"/>
@@ -267,6 +267,6 @@ failure!</string>
         </view>
     </objects>
     <resources>
-        <image name="cog-gray.png" width="40" height="40"/>
+        <image name="static/images/cog-gray.png" width="40" height="40"/>
     </resources>
 </document>
