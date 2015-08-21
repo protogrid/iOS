@@ -10,22 +10,26 @@
 	<string>Protogrid</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>3BFB016CC8798185B875761E0D2FAF876303287A</key>
+		<string>https://github.com/protogrid/iOS.git</string>
 		<key>F0ED94F860727B1937B6F075267A21D112CD53E3</key>
 		<string>pgrid0.protogrid.com:/home/git/protogrid.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ios/Protogrid/Protogrid.xcodeproj</string>
+	<string>Protogrid.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>3BFB016CC8798185B875761E0D2FAF876303287A</key>
+		<string>../..</string>
 		<key>F0ED94F860727B1937B6F075267A21D112CD53E3</key>
-		<string>../../../..</string>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>pgrid0.protogrid.com:/home/git/protogrid.git</string>
+	<string>https://github.com/protogrid/iOS.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>F0ED94F860727B1937B6F075267A21D112CD53E3</string>
+	<string>3BFB016CC8798185B875761E0D2FAF876303287A</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -34,7 +38,15 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>F0ED94F860727B1937B6F075267A21D112CD53E3</string>
 			<key>IDESourceControlWCCName</key>
-			<string>protogrid</string>
+			<string></string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3BFB016CC8798185B875761E0D2FAF876303287A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Protogrid</string>
 		</dict>
 	</array>
 </dict>
