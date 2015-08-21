@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6114904C1B80DC5800FDC1EA /* main.cblite2 in Resources */ = {isa = PBXBuildFile; fileRef = 611490481B80DC5800FDC1EA /* main.cblite2 */; };
+		6114904D1B80DC5800FDC1EA /* roles.cblite2 in Resources */ = {isa = PBXBuildFile; fileRef = 611490491B80DC5800FDC1EA /* roles.cblite2 */; };
+		6114904E1B80DC5800FDC1EA /* system.cblite2 in Resources */ = {isa = PBXBuildFile; fileRef = 6114904A1B80DC5800FDC1EA /* system.cblite2 */; };
+		6114904F1B80DC5800FDC1EA /* users_mirror.cblite2 in Resources */ = {isa = PBXBuildFile; fileRef = 6114904B1B80DC5800FDC1EA /* users_mirror.cblite2 */; };
 		6137F71A1A36E42B0005E3AD /* Protogrid_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6137F7191A36E42B0005E3AD /* Protogrid_iOS.framework */; };
 		6137F71C1A36E60F0005E3AD /* html in Resources */ = {isa = PBXBuildFile; fileRef = 6137F71B1A36E60F0005E3AD /* html */; };
 		6137F71D1A3725850005E3AD /* Protogrid_iOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6137F7191A36E42B0005E3AD /* Protogrid_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		619A69671A119BC3005C315A /* PGridSeedVersion in Resources */ = {isa = PBXBuildFile; fileRef = 6176788D19FAEE64003AEB6F /* PGridSeedVersion */; };
-		619A69681A119BC3005C315A /* main.cblite in Resources */ = {isa = PBXBuildFile; fileRef = 907E2EFE19FADB5100E63F1E /* main.cblite */; };
-		619A69691A119BC3005C315A /* roles.cblite in Resources */ = {isa = PBXBuildFile; fileRef = 907E2F0019FADB5100E63F1E /* roles.cblite */; };
-		619A696A1A119BC3005C315A /* system.cblite in Resources */ = {isa = PBXBuildFile; fileRef = 907E2F0219FADB5100E63F1E /* system.cblite */; };
-		619A696B1A119BC3005C315A /* users_mirror.cblite in Resources */ = {isa = PBXBuildFile; fileRef = 907E2F0419FADB5100E63F1E /* users_mirror.cblite */; };
 		61B2298D1AA3380900887A10 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B2298C1AA3380900887A10 /* libsqlite3.dylib */; };
 		61B2298F1AA3381700887A10 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B2298E1AA3381700887A10 /* libz.dylib */; };
 		61C49FD01A36E35E00EC772F /* js in Resources */ = {isa = PBXBuildFile; fileRef = 61C49FCF1A36E35E00EC772F /* js */; };
@@ -42,6 +42,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		611490481B80DC5800FDC1EA /* main.cblite2 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = main.cblite2; sourceTree = "<group>"; };
+		611490491B80DC5800FDC1EA /* roles.cblite2 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = roles.cblite2; sourceTree = "<group>"; };
+		6114904A1B80DC5800FDC1EA /* system.cblite2 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = system.cblite2; sourceTree = "<group>"; };
+		6114904B1B80DC5800FDC1EA /* users_mirror.cblite2 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = users_mirror.cblite2; sourceTree = "<group>"; };
 		6137F7191A36E42B0005E3AD /* Protogrid_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Protogrid_iOS.framework; sourceTree = "<group>"; };
 		6137F71B1A36E60F0005E3AD /* html */ = {isa = PBXFileReference; lastKnownFileType = folder; path = html; sourceTree = "<group>"; };
 		6176788D19FAEE64003AEB6F /* PGridSeedVersion */ = {isa = PBXFileReference; lastKnownFileType = text; path = PGridSeedVersion; sourceTree = "<group>"; };
@@ -69,14 +73,6 @@
 		61C49FCF1A36E35E00EC772F /* js */ = {isa = PBXFileReference; lastKnownFileType = folder; path = js; sourceTree = "<group>"; };
 		61ED429F1A9EBAD900C9AEFE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9078307F19E5978A00521386 /* PGridHTMLTemplateFilenames.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PGridHTMLTemplateFilenames.plist; sourceTree = "<group>"; };
-		907E2EFD19FADB5100E63F1E /* main attachments */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "main attachments"; sourceTree = "<group>"; };
-		907E2EFE19FADB5100E63F1E /* main.cblite */ = {isa = PBXFileReference; lastKnownFileType = text; path = main.cblite; sourceTree = "<group>"; };
-		907E2EFF19FADB5100E63F1E /* roles attachments */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "roles attachments"; sourceTree = "<group>"; };
-		907E2F0019FADB5100E63F1E /* roles.cblite */ = {isa = PBXFileReference; lastKnownFileType = text; path = roles.cblite; sourceTree = "<group>"; };
-		907E2F0119FADB5100E63F1E /* system attachments */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "system attachments"; sourceTree = "<group>"; };
-		907E2F0219FADB5100E63F1E /* system.cblite */ = {isa = PBXFileReference; lastKnownFileType = text; path = system.cblite; sourceTree = "<group>"; };
-		907E2F0319FADB5100E63F1E /* users_mirror attachments */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "users_mirror attachments"; sourceTree = "<group>"; };
-		907E2F0419FADB5100E63F1E /* users_mirror.cblite */ = {isa = PBXFileReference; lastKnownFileType = text; path = users_mirror.cblite; sourceTree = "<group>"; };
 		9093FCE919E1C0B700AA282A /* Protogrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Protogrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90B72F991A1E3B4800A02616 /* static */ = {isa = PBXFileReference; lastKnownFileType = folder; path = static; sourceTree = "<group>"; };
 		90C136601A1AA01E000A9CA2 /* PGridReplicatorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PGridReplicatorView.xib; sourceTree = "<group>"; };
@@ -140,15 +136,11 @@
 		90217A4019FAC72F00CD0AC6 /* Seed */ = {
 			isa = PBXGroup;
 			children = (
+				611490481B80DC5800FDC1EA /* main.cblite2 */,
+				611490491B80DC5800FDC1EA /* roles.cblite2 */,
+				6114904A1B80DC5800FDC1EA /* system.cblite2 */,
+				6114904B1B80DC5800FDC1EA /* users_mirror.cblite2 */,
 				6176788D19FAEE64003AEB6F /* PGridSeedVersion */,
-				907E2EFD19FADB5100E63F1E /* main attachments */,
-				907E2EFE19FADB5100E63F1E /* main.cblite */,
-				907E2EFF19FADB5100E63F1E /* roles attachments */,
-				907E2F0019FADB5100E63F1E /* roles.cblite */,
-				907E2F0119FADB5100E63F1E /* system attachments */,
-				907E2F0219FADB5100E63F1E /* system.cblite */,
-				907E2F0319FADB5100E63F1E /* users_mirror attachments */,
-				907E2F0419FADB5100E63F1E /* users_mirror.cblite */,
 			);
 			path = Seed;
 			sourceTree = "<group>";
@@ -232,6 +224,11 @@
 					9093FCE819E1C0B700AA282A = {
 						CreatedOnToolsVersion = 6.0.1;
 						DevelopmentTeam = 3PYFPK3C4Y;
+						SystemCapabilities = {
+							com.apple.DataProtection = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -258,19 +255,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6114904C1B80DC5800FDC1EA /* main.cblite2 in Resources */,
 				619A69671A119BC3005C315A /* PGridSeedVersion in Resources */,
 				6137F71C1A36E60F0005E3AD /* html in Resources */,
-				619A69681A119BC3005C315A /* main.cblite in Resources */,
-				619A69691A119BC3005C315A /* roles.cblite in Resources */,
-				619A696A1A119BC3005C315A /* system.cblite in Resources */,
-				619A696B1A119BC3005C315A /* users_mirror.cblite in Resources */,
 				61C49FD01A36E35E00EC772F /* js in Resources */,
 				90F20B3F19E1C14000EE88E6 /* PGridReplication.plist in Resources */,
 				90F20B3B19E1C14000EE88E6 /* Images.xcassets in Resources */,
+				6114904E1B80DC5800FDC1EA /* system.cblite2 in Resources */,
 				90F20B4019E1C14000EE88E6 /* PGridReplicationUnitTestsConfiguration.plist in Resources */,
 				9078308019E5978B00521386 /* PGridHTMLTemplateFilenames.plist in Resources */,
 				90C136611A1AA01E000A9CA2 /* PGridReplicatorView.xib in Resources */,
 				90B72F9A1A1E3B4800A02616 /* static in Resources */,
+				6114904F1B80DC5800FDC1EA /* users_mirror.cblite2 in Resources */,
+				6114904D1B80DC5800FDC1EA /* roles.cblite2 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

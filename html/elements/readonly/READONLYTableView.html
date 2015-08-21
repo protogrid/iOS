@@ -13,7 +13,7 @@
 						<th data-identifier='&&select' class="non-compressible fixed-at-beginning-of-table always-visible non-sortable"><input type='checkbox' class='no-click-to-open selected-all' name='selected_all_{{ name }}' value='&&all'></th>
 						{{/use_select_column}}
 						{{ #header_cells }}
-						<th data-identifier='{{ identifier }}' data-displaypriority='{{ display_priority }}' class='{{^is_sortable}}non-sortable{{/is_sortable}}'>
+						<th data-identifier='{{ identifier }}' data-displaypriority='{{ display_priority }}' data-valuetype='{{ value_type }}' class='{{^is_sortable}}non-sortable{{/is_sortable}}'>
 							{{^use_icon}}{{ text }}{{/use_icon}}
 							{{#use_icon}}<span class="glyphicon glyphicon-{{ icon_name }}"></span>{{/use_icon}}
 						</th>

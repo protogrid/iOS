@@ -31,5 +31,6 @@ typedef id(^response_func)(PGridApplication *app, PGridCard *previous_card, id r
 - (void) card_view_handler_with_card_name:(NSString*)card_name app_name:(NSString*)app_name request:(NSURLRequest*)request;
 - (id) initWithAppDelegate:(PGridAppDelegate*)app_delegate;
 - (void) update_status:(REPLICATION_STATUS)replication_status;
+- (void) reload_view;
 
 @end

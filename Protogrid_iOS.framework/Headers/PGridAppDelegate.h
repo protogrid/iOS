@@ -19,6 +19,8 @@
 
 @class CBLDatabase, PGridRootViewController, PGridApplication, PGridCard, PGridCardService;
 
+typedef void(^callbackReinitialise)(NSString *trigger);
+
 @interface PGridAppDelegate : NSObject <UIApplicationDelegate, UIAlertViewDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
@@ -31,7 +33,9 @@
 @property (strong) NSMutableDictionary *session;
 @property (strong) NSMutableArray *flashed_messages;
 @property (strong) NSString *default_error_message;
+@property (strong) NSMutableSet *proto_keys_current_table_view;
 @property BOOL is_current_user_server_admin;
+@property (strong) NSString *initialisation_message;
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions;
 - (NSURLComponents*) get_db_url;
 - (PGridCard*) get_current_user_card;

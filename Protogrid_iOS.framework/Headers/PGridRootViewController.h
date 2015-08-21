@@ -18,6 +18,6 @@
 @property (strong) PGridUIWebViewController *web_view_controller;
 @property (strong) PGridReplicatorViewController *replicator_view_controller;
 @property (strong) PGridDocumentInteractionController *document_view_controller;
-- (id) initWithAppDelegate:delegate;
+- (id) initWithAppDelegate:delegate delete_all_data_with_trigger:(void (^)(NSString*))delete_all_data_with_trigger;
 
 @end
