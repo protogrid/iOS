@@ -6,6 +6,7 @@
 	<dict>
 		<key>editable</key>
 		<array>
+			<string>EDITABLEDateTimeFilter</string>
 			<string>EDITABLEAttachments</string>
 			<string>EDITABLEChoice</string>
 			<string>EDITABLECode</string>
@@ -22,6 +23,10 @@
 		</array>
 		<key>readonly</key>
 		<array>
+			<string>READONLYDateTimeFilter</string>
+			<string>READONLYBlankCanvas</string>
+			<string>READONLYButton</string>
+			<string>READONLYDateTimeFilter</string>
 			<string>READONLYAttachments</string>
 			<string>READONLYChoice</string>
 			<string>READONLYColorChoice</string>

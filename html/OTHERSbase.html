@@ -1,10 +1,11 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
+	<head profile="http://www.w3.org/2005/10/profile">
 		<meta http-equiv="X-UA-Compatible" content="IE=9">
 		{{={{{ }}}=}}
+		<link rel="icon" type="image/png" href="{{ root_denominator }}static/images/favicon.png">
 		{{#css_files}}
-		<link href='{{ root_denominator }}static/css/{{ css_file_name }}' rel='stylesheet' media='screen'>
+		<link href='{{ root_denominator }}static/css/{{ css_file_name }}' rel='stylesheet' media='screen, print'>
 		{{/css_files}}
 		{{{={{ }}=}}}
 		<meta name="viewport" content="width=device-width,initial-scale=1">
@@ -51,7 +52,7 @@
               sizes="57x57"
               rel="apple-touch-icon">
 
-		<script type="text/javascript" language="javascript" charset="utf-8">
+		<script type="text/javascript" language="javascript">
 		$SCRIPT_ROOT = '{{{ script_root }}}';
 		$CURRENT_PATH = '{{{ current_path }}}';
 		$CREATE_LABEL = '{{ create_label }}';
@@ -60,6 +61,9 @@
 		$PREFERRED_LOCALE = '{{ preferred_locale }}';
 		$APP_LOCALE = '{{ app_locale }}';
 		$DATETIME_LOCALE = '{{ datetime_locale }}';
+		{{={{{ }}}=}}$HOST_DOMAIN = '{{ host_domain }}'{{{={{ }}=}}};
+		{{={{{ }}}=}}$APP_URL_NAME = '{{ app_url_name }}'{{{={{ }}=}}};
+		{{={{{ }}}=}}$CARD_WORKER_PATH = '{{ root_denominator }}static/js/{{ card_worker_filename }}'{{{={{ }}=}}};
 		{{={{{ }}}=}}$CLIENT = '{{ client }}'{{{={{ }}=}}};
 		</script>
 		<title>Protogrid</title>
@@ -67,8 +71,20 @@
 		{{#header_scripts}}
 		<script type="text/javascript" language="javascript" src='{{ root_denominator }}static/js/{{ script_file_name }}'></script>
 		{{/header_scripts}}
-		{{{={{ }}=}}}
 		<script type="text/javascript" language="javascript" src="{{ root_denominator }}static/js/de.js"></script>
+		{{{={{ }}=}}}
+		{{#link_client_script_libraries_available}}
+		{{#link_client_script_libraries}}
+		{{&attachment}}
+		{{/link_client_script_libraries}}
+		{{/link_client_script_libraries_available}}
+		{{#direct_client_script_libraries_available}}
+		{{#direct_client_script_libraries}}
+		<script type="text/javascript" language="javascript">
+		{{&code}}
+		</script>
+		{{/direct_client_script_libraries}}
+		{{/direct_client_script_libraries_available}}
 		<!--[if lt IE 9]>
 		<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -103,6 +119,16 @@
 						</div>
 					{{/messages}}
 				{{/messages_available}}
+				{{#status_update_long_running_tasks_available}}
+					{{#status_update_long_running_tasks}}
+						<div class="notification status_update_long_running_tasks">
+							<div id="longrunning_task_msg_inner_html"></div>
+							<script type="text/javascript">
+								update_notification({{ text }})
+							</script>
+						</div>
+					{{/status_update_long_running_tasks}}
+				{{/status_update_long_running_tasks_available}}
 			{{#log_available}}
 			</div>
 			{{/log_available}}

@@ -1,7 +1,14 @@
 <div class='col-sm-{{ column_width }}' {{#hidden_in_client}}style="display:none;"{{/hidden_in_client}}>
 	<div class="form-group">
 		<label for="{{ name }}">{{ label }}</label>
-		<input type="number" class="form-control{{#validation_error}} validation-error{{/validation_error}} to-be-posted" name='{{ name }}' value='{{ value }}'>
+		{{#edit_options_available}}
+		<div class="input-group">
+		{{/edit_options_available}}
+			<input id='{{ name }}' type="number" class="form-control{{#validation_error}} validation-error{{/validation_error}} to-be-posted" name='{{ name }}' value='{{ value }}'>
+			{{{ edit_options }}}
+		{{#edit_options_available}}
+		</div>
+		{{/edit_options_available}}
 		{{#validation_error}}<div class="help-block validation-error-text">{{ text }}</div>{{/validation_error}}
 		{{#help_text}}<div class="help-block">{{ text }}</div>{{/help_text}}
 	</div>

@@ -4,7 +4,7 @@
 		<label for='{{ name }}'>{{ label }}</label>
 		{{/inline}}
 		<div class="input-group select2-dynamic-input-group">
-			<input id='{{ name }}' type='hidden' class="form-control parent-relation to-be-posted" data-app-id="{{ related_app_id }}" data-app-choice-element="{{ app_choice_element }}" data-origin="{{{ choices_json_url }}}" data-protokey="{{ proto_key }}" data-filter-column-keys-by-element='{{{ filter_column_keys_by_element }}}' data-couchdb-viewname='{{ couchdb_viewname }}' {{^relation_resource_available}}data-disabled="disabled" {{/relation_resource_available}} name='{{ name }}' value='{{ value }}'>
+			<input id='{{ name }}' type='hidden' class="form-control parent-relation to-be-posted {{ field_persistence }}" data-app-id="{{ related_app_id }}" data-app-choice-element="{{ app_choice_element }}" data-origin="{{{ choices_json_url }}}" data-protokey="{{ proto_key }}" data-filter-column-keys-by-element='{{{ filter_column_keys_by_element }}}' data-couchdb-viewname='{{ couchdb_viewname }}' {{^relation_resource_available}}data-disabled="disabled" {{/relation_resource_available}} name='{{ name }}' value='{{ value }}'>
 			{{{ edit_options }}}
 		</div>
 		{{^inline}}

@@ -38,7 +38,7 @@ fi
 
 #find all couchbase lite files
 cblFilesDir="${applicationPath}/Library/Application Support/CouchbaseLite"
-cblFilePaths=(`find "${cblFilesDir}" -name *.cblite`)
+cblFilePaths=(`find "${cblFilesDir}" -name *.cblite*`)
 if [ "${#cblFilePaths[@]}" -eq 0 ]; then
 	echo "Error: no CouchbaseLite files found in designated path, even though initiation completed has been signaled.
 ${genericErrorMessage}"
@@ -47,59 +47,161 @@ fi
 
 #check if users_mirror, roles, system and main exists
 #Note: Passing multiple arrays fo functions is annoyingly complicated in Bash, so I just repeat the code here.
-usersFilename="users_mirror.cblite"
+usersFilename="users_mirror.cblite2"
 if [ $(contains "${cblFilePaths[@]}" ${cblFilesDir}/${usersFilename}) == "n" ]; then
 	echo "Error: no ${usersFilename} found in designated path, even though initiation completed has been signaled.
 ${genericErrorMessage}"
 	exit 3
 fi
-rolesFilename="roles.cblite"
+# usersFilenameShm="users_mirror.cblite-shm"
+# if [ $(contains "${cblFilePaths[@]}" ${cblFilesDir}/${usersFilenameShm}) == "n" ]; then
+# 	echo "Error: no ${usersFilenameShm} found in designated path, even though initiation completed has been signaled.
+# ${genericErrorMessage}"
+# 	exit 3
+# fi
+# usersFilenameWal="users_mirror.cblite-wal"
+# if [ $(contains "${cblFilePaths[@]}" ${cblFilesDir}/${usersFilenameWal}) == "n" ]; then
+# 	echo "Error: no ${usersFilenameWal} found in designated path, even though initiation completed has been signaled.
+# ${genericErrorMessage}"
+# 	exit 3
+# fi
+
+rolesFilename="roles.cblite2"
 if [ $(contains "${cblFilePaths[@]}" ${cblFilesDir}/${rolesFilename}) == "n" ]; then
 	echo "Error: no ${rolesFilename} found in designated path, even though initiation completed has been signaled.
 ${genericErrorMessage}"
 	exit 3
 fi
-systemFilename="system.cblite"
+# rolesFilenameShm="roles.cblite-shm"
+# if [ $(contains "${cblFilePaths[@]}" ${cblFilesDir}/${rolesFilenameShm}) == "n" ]; then
+# 	echo "Error: no ${rolesFilenameShm} found in designated path, even though initiation completed has been signaled.
+# ${genericErrorMessage}"
+# 	exit 3
+# fi
+# rolesFilenameWal="roles.cblite-wal"
+# if [ $(contains "${cblFilePaths[@]}" ${cblFilesDir}/${rolesFilenameWal}) == "n" ]; then
+# 	echo "Error: no ${rolesFilenameWal} found in designated path, even though initiation completed has been signaled.
+# ${genericErrorMessage}"
+# 	exit 3
+# fi
+
+systemFilename="system.cblite2"
 if [ $(contains "${cblFilePaths[@]}" ${cblFilesDir}/${systemFilename}) == "n" ]; then
 	echo "Error: no s${systemFilename} found in designated path, even though initiation completed has been signaled.
 ${genericErrorMessage}"
 	exit 3
 fi
-mainFilename="main.cblite"
+# systemFilenameShm="system.cblite-shm"
+# if [ $(contains "${cblFilePaths[@]}" ${cblFilesDir}/${systemFilenameShm}) == "n" ]; then
+# 	echo "Error: no s${systemFilenameShm} found in designated path, even though initiation completed has been signaled.
+# ${genericErrorMessage}"
+# 	exit 3
+# fi
+# systemFilenameWal="system.cblite-wal"
+# if [ $(contains "${cblFilePaths[@]}" ${cblFilesDir}/${systemFilenameWal}) == "n" ]; then
+# 	echo "Error: no s${systemFilenameWal} found in designated path, even though initiation completed has been signaled.
+# ${genericErrorMessage}"
+# 	exit 3
+# fi
+
+mainFilename="main.cblite2"
 if [ $(contains "${cblFilePaths[@]}" ${cblFilesDir}/${mainFilename}) == "n" ]; then
 	echo "Error: no ${mainFilename} found in designated path, even though initiation completed has been signaled.
 ${genericErrorMessage}"
 	exit 3
 fi
+# mainFilenameShm="main.cblite-shm"
+# if [ $(contains "${cblFilePaths[@]}" ${cblFilesDir}/${mainFilenameShm}) == "n" ]; then
+# 	echo "Error: no ${mainFilenameShm} found in designated path, even though initiation completed has been signaled.
+# ${genericErrorMessage}"
+# 	exit 3
+# fi
+# mainFilenameWal="main.cblite-wal"
+# if [ $(contains "${cblFilePaths[@]}" ${cblFilesDir}/${mainFilenameWal}) == "n" ]; then
+# 	echo "Error: no ${mainFilenameWal} found in designated path, even though initiation completed has been signaled.
+# ${genericErrorMessage}"
+# 	exit 3
+# fi
 
 #copy to the projects' seed directory
 seedDir="${currentDir}/Seed"
 mkdir -p "${seedDir}"
 set +e
-cp "${cblFilesDir}/${usersFilename}" "${seedDir}/"
+cp -r "${cblFilesDir}/${usersFilename}" "${seedDir}/"
 ret=$?
 if [ $ret -ne 0 ]; then
 	echo "Error: Could not copy to the seed directory ${seedDir}. Please check the permissions."
 	exit 4
 fi
-cp "${cblFilesDir}/${rolesFilename}" "${seedDir}/"
+# cp "${cblFilesDir}/${usersFilenameShm}" "${seedDir}/"
+# ret=$?
+# if [ $ret -ne 0 ]; then
+# 	echo "Error: Could not copy to the seed directory ${seedDir}. Please check the permissions."
+# 	exit 4
+# fi
+# cp "${cblFilesDir}/${usersFilenameWal}" "${seedDir}/"
+# ret=$?
+# if [ $ret -ne 0 ]; then
+# 	echo "Error: Could not copy to the seed directory ${seedDir}. Please check the permissions."
+# 	exit 4
+# fi
+
+cp -r "${cblFilesDir}/${rolesFilename}" "${seedDir}/"
 ret=$?
 if [ $ret -ne 0 ]; then
 	echo "Error: Could not copy to the seed directory ${seedDir}. Please check the permissions."
 	exit 4
 fi
-cp "${cblFilesDir}/${systemFilename}" "${seedDir}/"
+# cp "${cblFilesDir}/${rolesFilenameShm}" "${seedDir}/"
+# ret=$?
+# if [ $ret -ne 0 ]; then
+# 	echo "Error: Could not copy to the seed directory ${seedDir}. Please check the permissions."
+# 	exit 4
+# fi
+# cp "${cblFilesDir}/${rolesFilenameWal}" "${seedDir}/"
+# ret=$?
+# if [ $ret -ne 0 ]; then
+# 	echo "Error: Could not copy to the seed directory ${seedDir}. Please check the permissions."
+# 	exit 4
+# fi
+
+cp -r "${cblFilesDir}/${systemFilename}" "${seedDir}/"
 ret=$?
 if [ $ret -ne 0 ]; then
 	echo "Error: Could not copy to the seed directory ${seedDir}. Please check the permissions."
 	exit 4
 fi
-cp "${cblFilesDir}/${mainFilename}" "${seedDir}/"
+# cp "${cblFilesDir}/${systemFilenameShm}" "${seedDir}/"
+# ret=$?
+# if [ $ret -ne 0 ]; then
+# 	echo "Error: Could not copy to the seed directory ${seedDir}. Please check the permissions."
+# 	exit 4
+# fi
+# cp "${cblFilesDir}/${systemFilenameWal}" "${seedDir}/"
+# ret=$?
+# if [ $ret -ne 0 ]; then
+# 	echo "Error: Could not copy to the seed directory ${seedDir}. Please check the permissions."
+# 	exit 4
+# fi
+
+cp -r "${cblFilesDir}/${mainFilename}" "${seedDir}/"
 ret=$?
 if [ $ret -ne 0 ]; then
 	echo "Error: Could not copy to the seed directory ${seedDir}. Please check the permissions."
 	exit 4
 fi
+# cp "${cblFilesDir}/${mainFilenameShm}" "${seedDir}/"
+# ret=$?
+# if [ $ret -ne 0 ]; then
+# 	echo "Error: Could not copy to the seed directory ${seedDir}. Please check the permissions."
+# 	exit 4
+# fi
+# cp "${cblFilesDir}/${mainFilenameWal}" "${seedDir}/"
+# ret=$?
+# if [ $ret -ne 0 ]; then
+# 	echo "Error: Could not copy to the seed directory ${seedDir}. Please check the permissions."
+# 	exit 4
+# fi
 
 #copy the initiation completed file to the seed directory. It contains the version that has been seeded.
 cp "${firstInitiationCompletedFilePath}" "${seedDir}/PGridSeedVersion"

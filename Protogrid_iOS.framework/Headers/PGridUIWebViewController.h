@@ -25,11 +25,13 @@ typedef NS_ENUM(NSUInteger, REPLICATION_STATUS) {
 
 typedef id(^response_func)(PGridApplication *app, PGridCard *previous_card, id result, NSString *related_key, NSString *related_app_id, NSString *element_id, NSString *proto_key);
 
-@interface PGridUIWebViewController : NSObject <UIWebViewDelegate>
+@interface PGridUIWebViewController : UIViewController <UIWebViewDelegate>
 
 @property (strong) UIWebView *web_view;
 - (void) card_view_handler_with_card_name:(NSString*)card_name app_name:(NSString*)app_name request:(NSURLRequest*)request;
 - (id) initWithAppDelegate:(PGridAppDelegate*)app_delegate;
 - (void) update_status:(REPLICATION_STATUS)replication_status;
+- (void) reload_view;
++ (void) initialize_api_authentication;
 
 @end
