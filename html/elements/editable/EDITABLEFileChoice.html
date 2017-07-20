@@ -3,7 +3,17 @@
 	<div class='form-group'>
 		<label for='{{ name }}'>{{ label }}</label>
 		{{/inline}}
-		<input class="form-control{{#validation_error}} validation-error{{/validation_error}} to-be-posted" name='{{ name }}' type="file">
+		<div class="input-group">
+	        <span class="input-group-btn">
+	            <span class="btn btn-primary btn-file">
+	                Browse&hellip; <input id='{{ name }}' type="file" class="form-control{{#validation_error}} validation-error{{/validation_error}} to-be-posted" name='{{ name }}'>
+	            </span>
+	        </span>
+	        <input type="text" class="form-control" readonly>
+	    </div>
+		<!-- span class="btn btn-default btn-file">
+        	Browse <input class="form-control{{#validation_error}} validation-error{{/validation_error}} to-be-posted" name='{{ name }}' type="file">
+    	</span> -->
 		{{^inline}}
 		{{#validation_error}}<span class="help-block validation-error-text">{{ text }}</span>{{/validation_error}}
 		{{#help_text}}<span class="help-block">{{ text }}</span>{{/help_text}}

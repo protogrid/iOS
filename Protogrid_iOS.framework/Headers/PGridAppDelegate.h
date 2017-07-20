@@ -16,8 +16,11 @@
 #import <UIKit/UIKit.h>
 #import <CouchbaseLite/CouchbaseLite.h>
 #import "Commons.h"
+#import "CBLRegisterJSViewCompiler.h"
 
 @class CBLDatabase, PGridRootViewController, PGridApplication, PGridCard, PGridCardService;
+
+typedef void(^callbackReinitialise)(NSString *trigger);
 
 @interface PGridAppDelegate : NSObject <UIApplicationDelegate, UIAlertViewDelegate>
 
@@ -31,7 +34,10 @@
 @property (strong) NSMutableDictionary *session;
 @property (strong) NSMutableArray *flashed_messages;
 @property (strong) NSString *default_error_message;
+@property (strong) NSMutableSet *proto_keys_current_table_view;
 @property BOOL is_current_user_server_admin;
+@property (strong) NSString *initialisation_message;
+@property (strong) NSDictionary *supported_datetime_languages;
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions;
 - (NSURLComponents*) get_db_url;
 - (PGridCard*) get_current_user_card;
@@ -47,5 +53,7 @@
 - (void) disable_replication;
 - (void) update_replication_status;
 - (void) delete_all_data_with_trigger:(NSString*)trigger;
+- (NSDictionary*) get_user_locales_and_languages;
+- (NSURLComponents*) get_server_url;
 
 @end

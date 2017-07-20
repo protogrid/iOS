@@ -3,7 +3,7 @@
 	<div class='form-group'>
 		<label for='{{ name }}'>{{ label }}</label>
 		{{/inline}}
-		<select class="form-control static-choice to-be-posted" name='{{ name }}'>
+		<select class="form-control static-choice to-be-posted" name='{{ name }}' id='{{ name }}'>
 		{{#choices}}
 			<option value='{{ value }}' {{#selected}}selected='selected'{{/selected}}>{{ label }}</option>
 		{{/choices}}

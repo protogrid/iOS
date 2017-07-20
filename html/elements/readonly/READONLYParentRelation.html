@@ -8,7 +8,7 @@
 	<div class="form-group readonly">
 		<label for="{{ name }}">{{ label }}</label>
 		<div class="input-group">
-			<input id='{{ name }}' type="text" class="form-control" name='{{ name }}' data-key='{{ value }}' value='{{#empty_value}}{{ text }}{{/empty_value}}{{^empty_value}}{{ relational_info }}{{/empty_value}}' disabled>
+			<input id='{{ name }}' type="text" class="form-control {{ field_persistence }}" name='{{ name }}' data-key='{{ value }}' value='{{#empty_value}}{{ text }}{{/empty_value}}{{^empty_value}}{{ relational_info }}{{/empty_value}}' disabled>
 			{{{ edit_options }}}
 		</div>
 		{{#help_text}}<span class="help-block">{{ text }}</span>{{/help_text}}

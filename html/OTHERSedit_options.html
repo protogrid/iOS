@@ -3,12 +3,19 @@
 	{{#edit_option_count_one}}
 	{{#edit_options}}
 	{{#client_side}}
-	<button type="button" class="btn btn-default {{ bootstrap_btn_class }} {{action}} {{#show_label}}full-width{{/show_label}} {{#show_modal}}modal-caller{{/show_modal}} {{#use_character_icon}}button-with-character-icon{{/use_character_icon}}" {{#show_modal}}data-toggle="modal" data-target="#{{ modal_id }}" data-id="{{ name }}" data-relatedkey='{{ related_key }}' data-relatedappkey='{{ related_app_id }}' data-action="{{ action }}"{{/show_modal}} {{#is_disabled}}disabled{{/is_disabled}}>
+	{{#user_defined_action}}
+	<button type="button" title="{{ label }}" class="btn btn-default {{ bootstrap_btn_class }} {{#show_label}}full-width{{/show_label}} {{#show_modal}}modal-caller{{/show_modal}} {{#use_character_icon}}button-with-character-icon{{/use_character_icon}}" onclick="{{action}}{{! we explicitly want html encoding (2 braces) to avoid problems with quotes }}" {{#show_modal}}data-toggle="modal" data-target="#{{ modal_id }}" data-id="{{ name }}" data-relatedkey='{{ related_key }}' data-relatedappkey='{{ related_app_id }}' data-action="{{ action }}"{{/show_modal}} {{#is_disabled}}disabled{{/is_disabled}}>
+	{{#show_label}}{{ edit_group_label }}{{/show_label}}{{#use_character_icon}}{{ character_icon }}{{/use_character_icon}}{{^use_character_icon}}&nbsp;<span class="glyphicon glyphicon-{{ icon }}">{{/use_character_icon}}
+	</button>
+	{{/user_defined_action}}
+	{{^user_defined_action}}
+	<button type="button" title="{{ label }}" class="btn btn-default {{ bootstrap_btn_class }} {{action}} {{#show_label}}full-width{{/show_label}} {{#show_modal}}modal-caller{{/show_modal}} {{#use_character_icon}}button-with-character-icon{{/use_character_icon}}" {{#show_modal}}data-toggle="modal" data-target="#{{ modal_id }}" data-id="{{ name }}" data-relatedkey='{{ related_key }}' data-relatedappkey='{{ related_app_id }}' data-action="{{ action }}"{{/show_modal}} {{#is_disabled}}disabled{{/is_disabled}}>
 		{{#show_label}}{{ edit_group_label }}{{/show_label}}{{#use_character_icon}}{{ character_icon }}{{/use_character_icon}}{{^use_character_icon}}&nbsp;<span class="glyphicon glyphicon-{{ icon }}">{{/use_character_icon}}
 	</button>
+	{{/user_defined_action}}
 	{{/client_side}}
 	{{^client_side}}
-	<button type="button" class="btn btn-default {{ bootstrap_btn_class }} {{#show_label}}full-width{{/show_label}} {{#use_character_icon}}button-with-character-icon{{/use_character_icon}}" onclick="post_form(null, '{{ no_update_action }}', '{{ name }}', '{{ related_key }}', '{{ related_app_id }}');" data-id="{{ name }}" data-relatedkey='{{ related_key }}' data-relatedappkey='{{ related_app_id }}' data-action="{{ action }}" data-modalname='saveChangesModal' data-toggle="modal" {{#is_disabled}}disabled{{/is_disabled}}>
+	<button type="button" title="{{ label }}" class="btn btn-default {{ bootstrap_btn_class }} {{#show_label}}full-width{{/show_label}} {{#use_character_icon}}button-with-character-icon{{/use_character_icon}}" onclick="post_form(null, '{{ no_update_action }}', '{{ name }}', '{{ related_key }}', '{{ related_app_id }}');" data-id="{{ name }}" data-relatedkey='{{ related_key }}' data-relatedappkey='{{ related_app_id }}' data-action="{{ action }}" data-modalname='saveChangesModal' data-toggle="modal" {{#is_disabled}}disabled{{/is_disabled}}>
 		{{#show_label}}{{ edit_group_label }}{{/show_label}}{{#use_character_icon}}{{ character_icon }}{{/use_character_icon}}{{^use_character_icon}}&nbsp;<span class="glyphicon glyphicon-{{ icon }}">{{/use_character_icon}}
 	</button> <!-- nbsp is a workaround for a height aligning problem in BS 3.0.0 -->
 	{{/client_side}}
@@ -21,11 +28,20 @@
 	<ul class="dropdown-menu pull-right">
 		{{#edit_options}}
 		{{#client_side}}
+		{{#user_defined_action}}
+		<li>
+			<a href="javascript:void(0)" onclick="{{action}}{{! we explicitly want html encoding (2 braces) to avoid problems with quotes }}" role="button" class="btn {{#show_modal}}modal-caller{{/show_modal}}" {{#show_modal}}data-toggle="modal" data-target="#{{ modal_id }}" data-id="{{ name }}" data-relatedkey='{{ related_key }}' data-relatedappkey='{{ related_app_id }}' data-action="{{ action }}"{{/show_modal}} {{#is_disabled}}disabled{{/is_disabled}}>
+				{{ label }}
+			</a>
+		</li>
+		{{/user_defined_action}}
+		{{^user_defined_action}}
 		<li>
 			<a href="javascript:void(0)" role="button" class="btn {{action}} {{#show_modal}}modal-caller{{/show_modal}}" {{#show_modal}}data-toggle="modal" data-target="#{{ modal_id }}" data-id="{{ name }}" data-relatedkey='{{ related_key }}' data-relatedappkey='{{ related_app_id }}' data-action="{{ action }}"{{/show_modal}} {{#is_disabled}}disabled{{/is_disabled}}>
 				{{ label }}
 			</a>
 		</li>
+		{{/user_defined_action}}
 		{{/client_side}}
 		{{^client_side}}
 		<li>

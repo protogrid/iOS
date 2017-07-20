@@ -3,12 +3,19 @@
 		{{^disable_label}}
 		<label for="{{ name }}">{{ label }}</label>
 		{{/disable_label}}
-		{{#multi_line}}
-		<textarea lang="{{ language }}" class="form-control{{#validation_error}} validation-error{{/validation_error}} to-be-posted" name='{{ name }}'>{{ value }}</textarea>
-		{{/multi_line}}
-		{{^multi_line}}
-		<input type="text" class="form-control{{#validation_error}} validation-error{{/validation_error}} to-be-posted" name='{{ name }}' lang="{{ language }}" spellcheck="true" value='{{ value }}'>
-		{{/multi_line}}
+		{{#edit_options_available}}
+		<div class="input-group">
+		{{/edit_options_available}}
+			{{#multi_line}}
+			<textarea id='{{ name }}' lang="{{ language }}" class="form-control{{#validation_error}} validation-error{{/validation_error}} to-be-posted" name='{{ name }}'>{{ value }}</textarea>
+			{{/multi_line}}
+			{{^multi_line}}
+			<input id='{{ name }}' type="text" class="form-control{{#validation_error}} validation-error{{/validation_error}} to-be-posted" name='{{ name }}' lang="{{ language }}" spellcheck="true" value='{{ value }}'>
+			{{/multi_line}}
+			{{{ edit_options }}}
+		{{#edit_options_available}}
+		</div>
+		{{/edit_options_available}}
 		{{#validation_error}}<div class="help-block validation-error-text">{{ text }}</div>{{/validation_error}}
 		{{#help_text}}<div class="help-block">{{ text }}</div>{{/help_text}}
 	</div>

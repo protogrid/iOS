@@ -1,10 +1,17 @@
 {{^inline}}
 <div class='col-sm-{{ column_width }}' {{#hidden_in_client}}style="display:none;"{{/hidden_in_client}}>
-	<div class="form-group readonly">
+	<div class="form-group readonly" id='{{ name }}'>
 		<label for="{{ name }}">{{ label }}</label>
-		{{/inline}}
-		<div class='input-placeholder'>{{ value }}</div>
-		{{^inline}}
+		{{#edit_options_available}}
+		<div class="input-group">
+		{{/edit_options_available}}
+			{{/inline}}
+			<div class='input-placeholder'>{{ value }}</div>
+			{{^inline}}
+			{{{ edit_options }}}
+		{{#edit_options_available}}
+		</div>
+		{{/edit_options_available}}
 	</div>
 </div>
 {{/inline}}

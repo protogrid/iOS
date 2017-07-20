@@ -1,0 +1,44 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F0ED94F860727B1937B6F075267A21D112CD53E3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "9EDEC795D04B3E279370B0DA5F4D246DCDBD8B6C" : 0,
+    "F0ED94F860727B1937B6F075267A21D112CD53E3" : 0,
+    "8A15A8EA0B3D0B497C4883425BC74DF995224BB3" : 0,
+    "B27F6F95A336282C745D3A73CBCD88D006DA5634" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "7295222C-8A37-406A-A8CF-7369D7595C53",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "9EDEC795D04B3E279370B0DA5F4D246DCDBD8B6C" : "iOS\/GRMustache\/",
+    "F0ED94F860727B1937B6F075267A21D112CD53E3" : "protogrid\/",
+    "8A15A8EA0B3D0B497C4883425BC74DF995224BB3" : "iOS\/GRMustache\/src\/vendor\/groue\/jrswizzle\/",
+    "B27F6F95A336282C745D3A73CBCD88D006DA5634" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Protogrid",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ios\/Protogrid\/Protogrid.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/groue\/jrswizzle.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8A15A8EA0B3D0B497C4883425BC74DF995224BB3"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/groue\/GRMustache.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9EDEC795D04B3E279370B0DA5F4D246DCDBD8B6C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "typhooncomputing.com:~\/repo\/typhoon.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B27F6F95A336282C745D3A73CBCD88D006DA5634"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "pgrid0.protogrid.com:~\/protogrid.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F0ED94F860727B1937B6F075267A21D112CD53E3"
+    }
+  ]
+}

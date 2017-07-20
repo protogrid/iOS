@@ -19,10 +19,12 @@
 
 @property REPLICATION_STATUS replication_status;
 @property int documents_to_be_updated;
+@property (strong, readonly) PGridCard *properties;
 @property (strong) NSString *application_id;
 @property (strong, readonly) NSArray *template_related_keys;
-@property (strong, readonly) NSRegularExpression* uuid_pattern; //
-- (id) init_with_application_id:(NSString*)application_id app_delegate:(PGridAppDelegate*)app_delegate deleteFirst:(BOOL)deleteFirst;
+@property (strong, readonly) NSRegularExpression* uuid_pattern;
+@property BOOL table_view_needs_reload;
+- (id) init_with_application_id:(NSString*)application_id app_delegate:(PGridAppDelegate*)app_delegate deleteFirst:(BOOL)deleteFirst delete_all_data_with_trigger:(void (^)(NSString*))delete_all_data_with_trigger;
 - (void) start_synchronization:(void (^)())callbackHighPriorityPassed callbackContinuousPassed:(void (^)())callbackContinuousPassed;
 - (void) stop_synchronization;
 - (void) replicate_database:(NSString*)priority pathConfigurationList:(NSString*)pathConfigurationList thresholdDocAge:(NSString*)thresholdDocAge thresholdAttSize:(NSString*)thresholdAttSize callbackStatus:(void (^)(CBLReplicationStatus))callbackStatus;
@@ -53,8 +55,10 @@
 - (NSDictionary*) get_view_page_and_information:(NSString*)viewname design_card_key:(NSString*)design_card_key start_key:(id)start_key end_key:(id)end_key page_number:(NSNumber*)page_number limit:(NSNumber*)limit descending:(BOOL)descending last_page_limit:(NSNumber*)last_page_limit include_docs:(BOOL)include_docs;
 - (NSDictionary*) get_cards_and_page_information_from_view:(NSString*)viewname start_key:(id)start_key end_key:(id)end_key limit:(NSNumber*)limit;
 - (NSArray*) get_values_from_view_with_card_keys:(NSString*)viewname keys:(id)keys;
+- (NSString*) get_app_url_name;
 - (NSDictionary*) get_view_with_keys:(NSString*)viewname keys:(NSArray*)keys;
 + (NSOrderedSet*) get_card_keys_from_view_result:(NSDictionary*)view_result id_index_in_key:(id)id_index_in_key;
++ (void) update_related_cards_from_foreign_app:(PGridApplication*)origin_app related_cards:(NSMutableDictionary*)related_cards related_keys:(NSArray*)related_keys app:(PGridApplication*)app force_cache:(BOOL)force_cache;
 
 @end
 
@@ -65,3 +69,34 @@
 - (NSDictionary*) fixup_related_cards;
 
 @end
+
+//@interface NSDictionary_internal : NSDictionary;
+//@property (readonly) NSString* cbl_id;
+//@property (readonly) NSString* cbl_rev;
+//@property (readonly) BOOL cbl_deleted;
+//@property (readonly) NSDictionary* cbl_attachments;
+//@end
+
+
+@interface CBLBody_internal : NSObject <NSCopying>;
+
+@property (strong, readonly) id json;
+
+@end
+
+
+@interface CBLRevision_internal : CBLRevision;
+
+@property (strong, readonly) NSString *docID;
+@property (strong, readonly) CBLBody_internal *body;
+
+@end
+
+
+@interface CBLDatabaseChange_internal : CBLDatabaseChange
+
+@property (strong, readonly) CBLRevision_internal *addedRevision;
+
+@end
+
+
